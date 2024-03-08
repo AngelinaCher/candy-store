@@ -1,6 +1,7 @@
 import uuid
 from django.db import models
 from django.utils.text import slugify
+from django.core.validators import FileExtensionValidator
 
 
 class Supplier(models.Model):
@@ -55,11 +56,14 @@ class Product(models.Model):
     """ Модель таблицы Продукты """
     product_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     product_name = models.CharField(max_length=255, null=False, verbose_name='Название товара')
-    supplier_id = models.ForeignKey(to=Supplier, on_delete='PROTECT', null=False, blank=False, verbose_name='Поставщик')
-    category_id = models.ForeignKey(to=Category, on_delete='PROTECT', null=False, blank=False, verbose_name='Категория')
-    unit = models.CharField(max_length='20', verbose_name='Единица измерения')
+    supplier_id = models.ForeignKey(to=Supplier, on_delete=models.PROTECT, null=False, blank=False, verbose_name='Поставщик')
+    category_id = models.ForeignKey(to=Category, on_delete=models.PROTECT, null=False, blank=False, verbose_name='Категория')
+    unit = models.CharField(max_length='20', verbose_name='Единица измерения', null=False)
     unit_price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Цена за единицу')
     units_in_stock = models.PositiveIntegerField(verbose_name='Название товара')
+    image_product = models.ImageField(upload_to='', blank=True, null=True,
+                                      validators=[FileExtensionValidator(allowed_extensions=['jpg', 'png', 'jpeg'])],
+                                      verbose_name='Изображение')
     is_active = models.BooleanField(default=False, verbose_name='Название товара')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Дата изменения')
