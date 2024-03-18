@@ -1,8 +1,7 @@
 from pathlib import Path
-from config import secret_key, db_host, db_name, db_port, db_user, db_password
+from config import secret_key, db_host, db_name, db_port, db_user, db_password, redis_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 SECRET_KEY = secret_key
 
@@ -23,7 +22,6 @@ INSTALLED_APPS = [
     'orders.apps.OrdersConfig',
 
 ]
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -55,7 +53,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'candy_store_server.wsgi.application'
 
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -67,6 +64,16 @@ DATABASES = {
     },
 }
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.redis.RedisCache',
+        'LOCATION': redis_url,
+    }
+}
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_SAVE_EVERY_REQUEST = True
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -83,7 +90,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'UTC'
@@ -91,7 +97,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 STATIC_URL = 'static/'
 
