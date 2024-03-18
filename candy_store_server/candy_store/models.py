@@ -60,7 +60,7 @@ class Product(models.Model):
                                     verbose_name='Поставщик')
     category_id = models.ForeignKey(to=Category, on_delete=models.PROTECT, null=False, blank=False,
                                     verbose_name='Категория')
-    unit = models.CharField(max_length='20', verbose_name='Единица измерения', null=False)
+    unit = models.CharField(max_length=20, verbose_name='Единица измерения', null=False)
     unit_price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Цена за единицу')
     units_in_stock = models.PositiveIntegerField(verbose_name='Название товара')
     image_path = models.ImageField(upload_to='product_images/', blank=True, null=True,

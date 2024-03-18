@@ -10,13 +10,15 @@ from .managers import CustomUserManager
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
     """ Модель таблицы Пользователь """
-    user_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, verbose_name='id')
     email = models.EmailField(_('email address'), unique=True, null=False, )
-    firstname = models.CharField(max_length=128, blank=True, null=False)
-    lastname = models.CharField(max_length=128, blank=True, null=False)
-    is_active = models.BooleanField(default=False)
-    date_joined = models.DateTimeField(auto_now_add=True, default=timezone.now)
+    firstname = models.CharField(max_length=128, blank=True, null=False, verbose_name='Имя')
+    lastname = models.CharField(max_length=128, blank=True, null=False, verbose_name='Фамилия')
+    is_active = models.BooleanField(default=False, verbose_name='Активность')
+    date_joined = models.DateTimeField(auto_now_add=True, verbose_name='Дата регистрации')
     slug = models.SlugField(unique=True, max_length=255, blank=True)
+    is_staff = models.BooleanField(default=False, verbose_name='Сотрудник')
+    is_superuser = models.BooleanField(default=False, verbose_name='Администратор')
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
@@ -35,6 +37,6 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
             self.slug = slug
         super().save(*args, **kwargs)
 
-        class Meta:
-            verbose_name = 'Пользователь'
-            verbose_name_plural = 'Пользователи'
+    class Meta:
+        verbose_name = 'Пользователь'
+        verbose_name_plural = 'Пользователи'
