@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 from config import secret_key, db_host, db_name, db_port, db_user, db_password, redis_url
 
@@ -103,3 +104,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
