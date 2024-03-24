@@ -19,6 +19,22 @@ body, html {
   box-shadow: 0 0 5px $color-grey;
 }
 
+.custom-button {
+  background: $color-yellow;
+  border: $color-yellow;
+  color: $color-black;
+}
+
+.custom-button:hover {
+  color: $color-black;
+  background-color: $color-yellow-pressed;
+}
+
+.custom-button:focus {
+  color: $color-black;
+  background-color: $color-yellow-pressed;
+}
+
 /***** Start AppHeader *****/
 
 .app-header_nav {
@@ -99,4 +115,39 @@ body, html {
   color: $color-black;
 }
 
+.app-header_nav__account_text:hover{
+  color: $color-yellow;
+}
+
 /***** End AppHeader *****/
+
+/***** Start MainPage *****/
+
+.main-page_banner {
+  border-radius: 16px;
+  width: 100%;
+  min-height: 607px;
+  background: #ebebeb;
+  padding-left: 30px;
+}
+
+.main-page_banner h1 {
+  padding-top: 20%;
+}
+
+.main-page_banner p {
+  padding-top: 20px;
+  font-size: 16px;
+}
+
+.main-page_banner__btn {
+  margin-top: 20px;
+  border-radius: 8px;
+  width: 315px;
+  height: 52px;
+  font-size: 16px;
+  line-height: 125%;
+  text-align: center;
+}
+
+/***** End MainPage *****/

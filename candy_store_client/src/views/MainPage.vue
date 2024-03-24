@@ -1,15 +1,16 @@
 <template>
   <div class="main-page">
-    main page
+    <Bannner />
   </div>
 </template>
 
 <script>
-export default {
+import Bannner from "../components/main-page/Banner.vue";
 
+export default {
+    name: "MainPage",
+    components: {
+        Bannner,
+    }
 }
 </script>
-
-<style>
-
-</style>
