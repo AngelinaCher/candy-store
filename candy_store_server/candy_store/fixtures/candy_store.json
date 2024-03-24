@@ -1,0 +1,1685 @@
+[
+  {
+    "model": "candy_store.supplier",
+    "pk": 1,
+    "fields": {
+      "company_name": "KDV",
+      "contact_name": "Иванов Иван Иванович",
+      "address": "",
+      "email": null,
+      "phone_number": "89891661718",
+      "home_page": null,
+      "created_at": "2024-03-24T10:28:19.564Z",
+      "updated_at": "2024-03-24T10:28:19.564Z"
+    }
+  },
+  {
+    "model": "candy_store.category",
+    "pk": 2,
+    "fields": {
+      "category_name": "Вафли",
+      "description": "",
+      "slug": "vafli",
+      "created_at": "2024-03-24T10:22:55.031Z",
+      "updated_at": "2024-03-24T10:22:55.031Z"
+    }
+  },
+  {
+    "model": "candy_store.category",
+    "pk": 3,
+    "fields": {
+      "category_name": "Печенье",
+      "description": "",
+      "slug": "pechene",
+      "created_at": "2024-03-24T10:23:20.755Z",
+      "updated_at": "2024-03-24T10:23:20.755Z"
+    }
+  },
+  {
+    "model": "candy_store.category",
+    "pk": 4,
+    "fields": {
+      "category_name": "Пряники",
+      "description": "",
+      "slug": "pryaniki",
+      "created_at": "2024-03-24T10:23:27.259Z",
+      "updated_at": "2024-03-24T10:23:27.259Z"
+    }
+  },
+  {
+    "model": "candy_store.category",
+    "pk": 5,
+    "fields": {
+      "category_name": "Торты, рулеты, кексы",
+      "description": "",
+      "slug": "torty-rulety-keksy",
+      "created_at": "2024-03-24T10:23:37.081Z",
+      "updated_at": "2024-03-24T10:23:37.081Z"
+    }
+  },
+  {
+    "model": "candy_store.category",
+    "pk": 6,
+    "fields": {
+      "category_name": "Конфеты",
+      "description": "",
+      "slug": "konfety",
+      "created_at": "2024-03-24T10:23:47.313Z",
+      "updated_at": "2024-03-24T10:23:47.313Z"
+    }
+  },
+  {
+    "model": "candy_store.category",
+    "pk": 7,
+    "fields": {
+      "category_name": "Шоколад",
+      "description": "",
+      "slug": "shokolad",
+      "created_at": "2024-03-24T10:23:52.638Z",
+      "updated_at": "2024-03-24T10:23:52.638Z"
+    }
+  },
+  {
+    "model": "candy_store.category",
+    "pk": 8,
+    "fields": {
+      "category_name": "Батончики",
+      "description": "",
+      "slug": "batonchiki",
+      "created_at": "2024-03-24T10:23:58.336Z",
+      "updated_at": "2024-03-24T10:23:58.336Z"
+    }
+  },
+  {
+    "model": "candy_store.category",
+    "pk": 9,
+    "fields": {
+      "category_name": "Зефир, мармелад",
+      "description": "",
+      "slug": "zefir-marmelad",
+      "created_at": "2024-03-24T10:24:07.104Z",
+      "updated_at": "2024-03-24T10:24:07.104Z"
+    }
+  },
+  {
+    "model": "candy_store.category",
+    "pk": 10,
+    "fields": {
+      "category_name": "Халва, козинаки",
+      "description": "",
+      "slug": "halva-kozinaki",
+      "created_at": "2024-03-24T10:24:20.431Z",
+      "updated_at": "2024-03-24T10:24:20.431Z"
+    }
+  },
+  {
+    "model": "candy_store.category",
+    "pk": 11,
+    "fields": {
+      "category_name": "Чай",
+      "description": "",
+      "slug": "chaj",
+      "created_at": "2024-03-24T10:24:26.510Z",
+      "updated_at": "2024-03-24T10:24:26.511Z"
+    }
+  },
+  {
+    "model": "candy_store.category",
+    "pk": 12,
+    "fields": {
+      "category_name": "Кофе, какао",
+      "description": "",
+      "slug": "kofe-kakao",
+      "created_at": "2024-03-24T10:24:32.856Z",
+      "updated_at": "2024-03-24T10:24:32.856Z"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "045ea9dc-1ea1-403b-99d2-34b732f46cd7",
+    "fields": {
+      "product_name": "Печенье Шоколадное",
+      "supplier_id": 1,
+      "category_id": 3,
+      "description": "По-домашнему вкусное хрустящее шоколадное печенье. \r\n\r\n– С кусочками темного шоколада и какао.\r\n\r\n– Мука высшего сорта.  \r\n\r\n– С молоком. \r\n\r\n– Какао из отборных какао-бобов.",
+      "unit": "grams",
+      "unit_price": "35.00",
+      "units_in_stock": 3800,
+      "image_path": "product_images/Печенье/Снимок_экрана_от_2024-03-24_16-18-28.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:18:36.139Z",
+      "updated_at": "2024-03-24T13:18:36.139Z",
+      "slug": "pechene-shokoladnoe"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "07851604-e009-4140-a1d2-c80c69342347",
+    "fields": {
+      "product_name": "Печенье–сэндвич с шоколадным вкусом",
+      "supplier_id": 1,
+      "category_id": 3,
+      "description": "Хрустящее печенье с какао и нежным сливочным кремом.  \r\n\r\n– С арахисовой пастой.  \r\n\r\n– С какао из отборных какао-бобов.",
+      "unit": "grams",
+      "unit_price": "41.00",
+      "units_in_stock": 3400,
+      "image_path": "product_images/Печенье/Снимок_экрана_от_2024-03-24_16-14-01.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:14:08.797Z",
+      "updated_at": "2024-03-24T13:14:08.797Z",
+      "slug": "pechenesendvich-s-shokoladnym-vkusom"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "0b75b3d3-61ac-4587-a253-02bdfc2b13c5",
+    "fields": {
+      "product_name": "«BabyFox», напиток с какао, 135 г",
+      "supplier_id": 1,
+      "category_id": 12,
+      "description": "Любимый с детства какао-напиток, обогащенный комплексом витаминов.\r\n\r\nБыстрорастворимый!  Просто добавьте в кружку с какао горячее молоко и зарядитесь «гормоном радости»! \r\n\r\n– Источник кальция. \r\n\r\n– Кладезь витаминов А, Е, С и группы В. \r\n\r\n– Упаковка с застежкой: удобно открывать и закрывать, сохраняя вкус и аромат напитка.",
+      "unit": "pieces",
+      "unit_price": "80.00",
+      "units_in_stock": 3,
+      "image_path": "product_images/Кофе, какао/Снимок_экрана_от_2024-03-24_16-00-03.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:00:11.818Z",
+      "updated_at": "2024-03-24T13:00:11.818Z",
+      "slug": "babyfox-napitok-s-kakao-135-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "0c4d58bc-e476-4410-959d-7e8f617923f6",
+    "fields": {
+      "product_name": "Печенье «Курабье с вишнёвым джемом», сдобное",
+      "supplier_id": 1,
+      "category_id": 3,
+      "description": "По-домашнему вкусное хрустящее печенье с вишневой начинкой.  \r\n\r\n– С фруктовым пюре. \r\n\r\n– На отборном яйце.",
+      "unit": "grams",
+      "unit_price": "38.00",
+      "units_in_stock": 4000,
+      "image_path": "product_images/Печенье/Снимок_экрана_от_2024-03-24_16-10-30.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:10:36.926Z",
+      "updated_at": "2024-03-24T13:10:36.926Z",
+      "slug": "pechene-kurabe-s-vishnyovym-dzhemom-sdobnoe"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "0ce2f6c5-31e1-4e40-bd5f-81998fd5f776",
+    "fields": {
+      "product_name": "«O'Zera», молочный шоколад Milk & Mango filling с желейной начинкой из манго, 24 г",
+      "supplier_id": 1,
+      "category_id": 7,
+      "description": "Уникальный тонкий шоколад – всего 6 мм! С начинкой из манго! \r\n\r\nНет аналогов в России! \r\n\r\n– Какао из отборных какао-бобов. \r\n\r\n– С соком натурального манго.    \r\n\r\n– «Гормон счастья» за считанные минуты! \r\n\r\nВес шоколадки 24 г.\r\n\r\nВ упаковке 30 шоколадок.",
+      "unit": "pieces",
+      "unit_price": "23.00",
+      "units_in_stock": 10,
+      "image_path": "product_images/Шоколад/Снимок_экрана_от_2024-03-24_17-07-45.png",
+      "is_active": true,
+      "created_at": "2024-03-24T14:07:52.046Z",
+      "updated_at": "2024-03-24T14:07:52.046Z",
+      "slug": "ozera-molochnyj-shokolad-milk-mango-filling-s-zhelejnoj-nachinkoj-iz-mango-24-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "12fab6d9-789c-494a-9700-64083ee908ad",
+    "fields": {
+      "product_name": "«O'Zera», конфеты шоколадные «Вкус романтического вечера», 195 г",
+      "supplier_id": 1,
+      "category_id": 6,
+      "description": "Уникальные трехслойные конфеты: пралине с фундуком и миндалем в великолепном молочном шоколаде.  \r\n\r\n– Фундук и миндаль высшей категории.  \r\n\r\n– Шоколад из отборных какао-бобов. \r\n\r\nИсточник энергии и отличного настроения!",
+      "unit": "pieces",
+      "unit_price": "420.00",
+      "units_in_stock": 1,
+      "image_path": "product_images/Конфеты/Снимок_экрана_от_2024-03-24_15-44-30.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:44:41.870Z",
+      "updated_at": "2024-03-24T12:44:41.870Z",
+      "slug": "ozera-konfety-shokoladnye-vkus-romanticheskogo-vechera-195-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "13de307c-adb3-46be-8503-352f300e1109",
+    "fields": {
+      "product_name": "«Яшкино», вафли тонкие с какао и молочным кремом, 144 г",
+      "supplier_id": 1,
+      "category_id": 8,
+      "description": "Хрустящие вафельки с нежнейшим молочным кремом. \r\n\r\n– Меньше вафельных слоев.  \r\n\r\n– С кокосовым маслом – источником энергии. \r\n\r\n– Без пальмового масла.  \r\n\r\nВес вафельки всего 6 г.",
+      "unit": "pieces",
+      "unit_price": "72.00",
+      "units_in_stock": 3,
+      "image_path": "product_images/Батончики/Снимок_экрана_от_2024-03-24_14-44-47.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:44:56.361Z",
+      "updated_at": "2024-03-24T11:44:56.361Z",
+      "slug": "yashkino-vafli-tonkie-s-kakao-i-molochnym-kremom-144-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "16e44adf-17c0-4f68-9519-c8cf4120be2f",
+    "fields": {
+      "product_name": "«KrutFrut», мармелад жевательный в форме осьминожек",
+      "supplier_id": 1,
+      "category_id": 9,
+      "description": "Ассорти вкусов: черешня и красная смородина. \r\n\r\n– 0% жира.  \r\n\r\n– С натуральными соками. \r\n\r\n– На яблочном пектине – природном загустителе. \r\n\r\n– В форме осминожек.",
+      "unit": "grams",
+      "unit_price": "39.00",
+      "units_in_stock": 1000,
+      "image_path": "product_images/Зефир, мармелад/Снимок_экрана_от_2024-03-24_15-30-52.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:30:59.333Z",
+      "updated_at": "2024-03-24T12:30:59.333Z",
+      "slug": "krutfrut-marmelad-zhevatelnyj-v-forme-osminozhek"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "186f96e8-6086-444a-ba03-5ee006e0cc6a",
+    "fields": {
+      "product_name": "«BabyFox», молочный шоколад, 90 г",
+      "supplier_id": 1,
+      "category_id": 7,
+      "description": "100% натуральный шоколад с молочной начинкой. \r\n\r\nС повышенным содержанием молока – более 25%! \r\n\r\n– Какао из отборных какао-бобов. \r\n\r\n– Помощник для мозга.",
+      "unit": "pieces",
+      "unit_price": "100.00",
+      "units_in_stock": 10,
+      "image_path": "product_images/Шоколад/Снимок_экрана_от_2024-03-24_17-04-48.png",
+      "is_active": true,
+      "created_at": "2024-03-24T14:04:55.667Z",
+      "updated_at": "2024-03-24T14:04:55.667Z",
+      "slug": "babyfox-molochnyj-shokolad-90-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "1a189eaa-8a62-410e-b77f-48b7491f287e",
+    "fields": {
+      "product_name": "Печенье «Мини-эклеры начинкой «Заварной крем»",
+      "supplier_id": 1,
+      "category_id": 3,
+      "description": "Печенье из лёгкого заварного теста со сливочной начинкой.  \r\n\r\n– Без дрожжей. \r\n\r\n– На свежем отборном яйце.\r\n\r\n– Со сливочным маслом и молоком.",
+      "unit": "grams",
+      "unit_price": "45.00",
+      "units_in_stock": 2000,
+      "image_path": "product_images/Печенье/Снимок_экрана_от_2024-03-24_16-16-57.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:17:03.901Z",
+      "updated_at": "2024-03-24T13:17:03.901Z",
+      "slug": "pechene-mini-eklery-nachinkoj-zavarnoj-krem"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "1b57ba40-e7ae-4bb7-bc1d-03741d628add",
+    "fields": {
+      "product_name": "Печенье «Мини-эклеры с малиновой начинкой»",
+      "supplier_id": 1,
+      "category_id": 3,
+      "description": "Печенье из лёгкого заварного теста с ягодной начинкой. \r\n\r\n– Без дрожжей. \r\n\r\n– На свежем отборном яйце.\r\n\r\n– С натуральной малиной.",
+      "unit": "grams",
+      "unit_price": "43.00",
+      "units_in_stock": 2000,
+      "image_path": "product_images/Печенье/Снимок_экрана_от_2024-03-24_16-16-01.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:16:08.861Z",
+      "updated_at": "2024-03-24T13:16:08.861Z",
+      "slug": "pechene-mini-eklery-s-malinovoj-nachinkoj"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "1ca68a3a-9f83-49d2-8fa2-5257348bddba",
+    "fields": {
+      "product_name": "«O'Zera», темный шоколад Dark & Orange with chili с апельсиновыми криспами и перцем чили, 24 г",
+      "supplier_id": 1,
+      "category_id": 7,
+      "description": "Уникальный тонкий шоколад – всего 6 мм! С апельсином и перцем! \r\n\r\nНет аналогов в России! \r\n\r\n– Какао из отборных какао-бобов. \r\n\r\n– C цельным сгущенным молоком.   \r\n\r\n– С криспами – высушенной мякотью апельсина. \r\n\r\n– С перцем чили.  \r\n\r\n– «Гормон счастья» за считанные минуты! \r\n\r\nВес шоколадки 24г.\r\n\r\nВ упаковке 30 шоколадок.",
+      "unit": "pieces",
+      "unit_price": "40.00",
+      "units_in_stock": 10,
+      "image_path": "product_images/Шоколад/Снимок_экрана_от_2024-03-24_17-05-28.png",
+      "is_active": true,
+      "created_at": "2024-03-24T14:05:35.696Z",
+      "updated_at": "2024-03-24T14:05:35.696Z",
+      "slug": "ozera-temnyj-shokolad-dark-orange-with-chili-s-apelsinovymi-krispami-i-percem-chili-24-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "1e802ba1-6fd6-457f-99c0-0463d7c10c06",
+    "fields": {
+      "product_name": "«O'Zera», белый шоколад White, 45 г",
+      "supplier_id": 1,
+      "category_id": 8,
+      "description": "Нежнейший сливочный шоколад цвета слоновой кости.\r\n\r\n– С какао-маслом – источником витамина К.",
+      "unit": "pieces",
+      "unit_price": "50.00",
+      "units_in_stock": 50,
+      "image_path": "product_images/Батончики/Снимок_экрана_от_2024-03-24_14-31-31.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:31:37.302Z",
+      "updated_at": "2024-03-24T11:31:37.302Z",
+      "slug": "ozera-belyj-shokolad-white-45-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "1e8b5c19-6e62-4454-8cf4-f8590992f393",
+    "fields": {
+      "product_name": "«Яшкино», печенье «Вишня», сдобное, 137 г",
+      "supplier_id": 1,
+      "category_id": 3,
+      "description": "Бисквитное печенье с вишневым желе, в глазури. \r\n\r\n– С соком садовой вишни.  \r\n\r\n– Глазурь из отборных какао-бобов. \r\n\r\nВ упаковке 11 печенек.",
+      "unit": "pieces",
+      "unit_price": "82.00",
+      "units_in_stock": 3,
+      "image_path": "product_images/Печенье/Снимок_экрана_от_2024-03-24_16-17-34.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:17:41.105Z",
+      "updated_at": "2024-03-24T13:17:41.105Z",
+      "slug": "yashkino-pechene-vishnya-sdobnoe-137-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "2083d9ee-adde-40cd-9e0e-b8ae86dce1fc",
+    "fields": {
+      "product_name": "«O'Zera», конфеты шоколадные Almond cream",
+      "supplier_id": 1,
+      "category_id": 6,
+      "description": "Молочный шоколад с кремовой миндальной начинкой с добавлением дробленого ореха. \r\n\r\n– Шоколад из отборных какао-бобов.\r\n\r\n– Отборный миндаль.",
+      "unit": "grams",
+      "unit_price": "87.00",
+      "units_in_stock": 2000,
+      "image_path": "product_images/Конфеты/Снимок_экрана_от_2024-03-24_15-50-44.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:50:55.617Z",
+      "updated_at": "2024-03-24T12:50:55.617Z",
+      "slug": "ozera-konfety-shokoladnye-almond-cream"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "20e2a45c-65b9-4684-a931-685439fd41c7",
+    "fields": {
+      "product_name": "«BabyFox», мармелад жевательный с соком ягод и фруктов, 30 г",
+      "supplier_id": 1,
+      "category_id": 9,
+      "description": "Мармелад из 100% натуральных соков яблока, вишни, ананаса, черной смородины и моркови. \r\n\r\n– 0% жира. \r\n\r\n– С витаминами C, В5, B6, PP и фолиевой кислотой. \r\n\r\n–  В форме фигурок животных.",
+      "unit": "pieces",
+      "unit_price": "20.00",
+      "units_in_stock": 10,
+      "image_path": "product_images/Зефир, мармелад/Снимок_экрана_от_2024-03-24_15-32-58.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:33:03.879Z",
+      "updated_at": "2024-03-24T12:33:03.879Z",
+      "slug": "babyfox-marmelad-zhevatelnyj-s-sokom-yagod-i-fruktov-30-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "2163d6ed-d945-402e-abb0-f262cac0442a",
+    "fields": {
+      "product_name": "«O'Zera», шоколадный батончик White & Coconut cream, 45 г",
+      "supplier_id": 1,
+      "category_id": 8,
+      "description": "Нежнейший шоколад цвета слоновой кости с кремовой кокосовой начинкой.\r\n\r\n– С какао-маслом – источником витамина К.\r\n\r\n– Со сливками из спелого кокоса.",
+      "unit": "pieces",
+      "unit_price": "50.00",
+      "units_in_stock": 50,
+      "image_path": "product_images/Батончики/Снимок_экрана_от_2024-03-24_14-32-00.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:32:06.167Z",
+      "updated_at": "2024-03-24T11:32:06.167Z",
+      "slug": "ozera-shokoladnyj-batonchik-white-coconut-cream-45-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "25d63ed5-adb5-432e-adec-582ef239f0d0",
+    "fields": {
+      "product_name": "«O'Zera», шоколадный батончик Milk Caramel, 50 г",
+      "supplier_id": 1,
+      "category_id": 8,
+      "description": "Нежнейший шоколад с карамельной начинкой.\r\n\r\n– Какао из отборных какао-бобов.\r\n\r\n– Много начинки.",
+      "unit": "pieces",
+      "unit_price": "50.00",
+      "units_in_stock": 33,
+      "image_path": "product_images/Батончики/Снимок_экрана_от_2024-03-24_14-26-49.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:26:56.618Z",
+      "updated_at": "2024-03-24T11:26:56.618Z",
+      "slug": "ozera-shokoladnyj-batonchik-milk-caramel-50-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "262383fc-7d52-46db-8c7b-3b3f023cfb5b",
+    "fields": {
+      "product_name": "«O'Zera», молочный шоколад Milk & Orange filling с желейной апельсиновой начинкой, 24 г",
+      "supplier_id": 1,
+      "category_id": 7,
+      "description": "Уникальный тонкий шоколад – всего 6 мм! С натуральным апельсином. \r\n\r\nНет аналогов в России! \r\n\r\n– Какао из отборных какао-бобов. \r\n\r\n– С соком апельсина.  \r\n\r\n– «Гормон счастья» за считанные минуты!  \r\n\r\nВес шоколадки 24 г.\r\n\r\nВ упаковке 30 шоколадок.",
+      "unit": "pieces",
+      "unit_price": "23.00",
+      "units_in_stock": 10,
+      "image_path": "product_images/Шоколад/Снимок_экрана_от_2024-03-24_17-06-37.png",
+      "is_active": true,
+      "created_at": "2024-03-24T14:06:44.725Z",
+      "updated_at": "2024-03-24T14:06:44.725Z",
+      "slug": "ozera-molochnyj-shokolad-milk-orange-filling-s-zhelejnoj-apelsinovoj-nachinkoj-24-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "268cf931-8bf9-4cba-93e9-4b31dc0565e0",
+    "fields": {
+      "product_name": "«Smart Formula», мармелад жевательный Say no to sugar Смородина-виноград-клубника, 70 г",
+      "supplier_id": 1,
+      "category_id": 9,
+      "description": "Мармелад без сахара! \r\n\r\nАссорти вкусов: смородина, виноград, клубника. \r\n\r\n– 0% жира. \r\n\r\n– С натуральными соками и пюре.  \r\n\r\n– Обогащен витаминами С и группы В.",
+      "unit": "pieces",
+      "unit_price": "50.00",
+      "units_in_stock": 12,
+      "image_path": "product_images/Зефир, мармелад/Снимок_экрана_от_2024-03-24_15-28-14.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:28:20.986Z",
+      "updated_at": "2024-03-24T12:28:20.986Z",
+      "slug": "smart-formula-marmelad-zhevatelnyj-say-no-to-sugar-smorodina-vinograd-klubnika-70-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "2e837075-ee39-4621-91db-3c2ecfef7513",
+    "fields": {
+      "product_name": "«O'Zera», конфеты с цельным фундуком",
+      "supplier_id": 1,
+      "category_id": 6,
+      "description": "Конфеты с цельным фундуком в великолепном молочном шоколаде. \r\n\r\n– Отборные орехи. \r\n\r\n– Шоколад из отборных какао-бобов.",
+      "unit": "grams",
+      "unit_price": "105.00",
+      "units_in_stock": 1000,
+      "image_path": "product_images/Конфеты/Снимок_экрана_от_2024-03-24_15-53-12.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:53:20.596Z",
+      "updated_at": "2024-03-24T12:58:08.749Z",
+      "slug": "ozera-konfety-s-celnym-fundukom"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "30817b9f-28e1-42bd-9c8c-a5c51eba8581",
+    "fields": {
+      "product_name": "«O'Zera», молочный шоколад Milk & Caramel с мягкой карамельной начинкой, 24 г",
+      "supplier_id": 1,
+      "category_id": 7,
+      "description": "Уникальный тонкий шоколад – всего 6 мм! С мягкой карамелью! \r\n\r\nНет аналогов в России! \r\n\r\n– Какао из отборных какао-бобов. \r\n\r\n– C цельным сгущенным молоком.   \r\n\r\n– «Гормон счастья» за считанные минуты! \r\n\r\nВес шоколадки 24 г.\r\n\r\nВ упаковке 30 шоколадок.",
+      "unit": "pieces",
+      "unit_price": "23.00",
+      "units_in_stock": 10,
+      "image_path": "product_images/Шоколад/Снимок_экрана_от_2024-03-24_17-05-59.png",
+      "is_active": true,
+      "created_at": "2024-03-24T14:06:08.836Z",
+      "updated_at": "2024-03-24T14:06:08.836Z",
+      "slug": "ozera-molochnyj-shokolad-milk-caramel-s-myagkoj-karamelnoj-nachinkoj-24-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "35a926f4-8969-492d-8fd3-a8785599e609",
+    "fields": {
+      "product_name": "Печенье «Цельнозерновое» с глазурью и овсяными хлопьями",
+      "supplier_id": 1,
+      "category_id": 4,
+      "description": "Рассыпчатое фигурное печенье со злаками, донышко покрыто глазурью.\r\n\r\n– С овсяными хлопьями.\r\n\r\n– С цельнозерновой мукой. \r\n\r\n– Сохраняем витамины и минералы. \r\n\r\n– Глазурь из отборных какао-бобов.",
+      "unit": "grams",
+      "unit_price": "34.00",
+      "units_in_stock": 4000,
+      "image_path": "product_images/Пряники/Снимок_экрана_от_2024-03-24_16-19-12.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:19:21.755Z",
+      "updated_at": "2024-03-24T13:19:21.755Z",
+      "slug": "pechene-celnozernovoe-s-glazuryu-i-ovsyanymi-hlopyami"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "38184c42-86be-4a67-be1e-c02ba2772619",
+    "fields": {
+      "product_name": "«O'Zera», шоколадный батончик Strawberry, 50 г",
+      "supplier_id": 1,
+      "category_id": 8,
+      "description": "Нежный шоколад с повышенным содержанием молока, с ягодной начинкой. \r\n\r\n– С соком клубники.   \r\n\r\n– Какао из отборных какао-бобов.",
+      "unit": "pieces",
+      "unit_price": "50.00",
+      "units_in_stock": 35,
+      "image_path": "product_images/Батончики/Снимок_экрана_от_2024-03-24_14-17-19.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:17:27.643Z",
+      "updated_at": "2024-03-24T11:33:11.521Z",
+      "slug": "ozera-shokoladnyj-batonchik-strawberry-50-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "3d48d4eb-b2f9-45dc-a5a0-557d2f5ca735",
+    "fields": {
+      "product_name": "«BabyFox», конфеты шоколадные mini с фундуком",
+      "supplier_id": 1,
+      "category_id": 6,
+      "description": "Мини-конфетки с кусочками обжаренного фундука! Много ореха! \r\n\r\n– Отборный фундук. \r\n\r\n– 100% молочный шоколад. \r\n\r\n– Упаковка с замком-липучкой. \r\n\r\nКаждая конфета в индивидуальной упаковке.",
+      "unit": "grams",
+      "unit_price": "125.00",
+      "units_in_stock": 1000,
+      "image_path": "product_images/Конфеты/Снимок_экрана_от_2024-03-24_15-43-29.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:43:40.253Z",
+      "updated_at": "2024-03-24T12:43:40.253Z",
+      "slug": "babyfox-konfety-shokoladnye-mini-s-fundukom"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "4005955b-9b89-43e5-863c-ec1d5da7a706",
+    "fields": {
+      "product_name": "«O'Zera», шоколадный батончик Dark Truffle, 47 г",
+      "supplier_id": 1,
+      "category_id": 8,
+      "description": "Благородный шоколад с трюфельной начинкой. \r\n\r\n– Какао из отборных какао-бобов. \r\n\r\n– Много начинки.",
+      "unit": "pieces",
+      "unit_price": "50.00",
+      "units_in_stock": 50,
+      "image_path": "product_images/Батончики/Снимок_экрана_от_2024-03-24_14-30-56.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:31:02.559Z",
+      "updated_at": "2024-03-24T11:31:02.559Z",
+      "slug": "ozera-shokoladnyj-batonchik-dark-truffle-47-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "4724f640-5a66-4e0e-9eb3-97c3cb855b01",
+    "fields": {
+      "product_name": "Печенье-сэндвич с кокосовым вкусом",
+      "supplier_id": 1,
+      "category_id": 3,
+      "description": "Хрустящее печенье с нежным сливочно-кокосовым кремом.   \r\n\r\n– Со сливками. \r\n\r\n– С кокосовой стружкой.",
+      "unit": "grams",
+      "unit_price": "40.00",
+      "units_in_stock": 4000,
+      "image_path": "product_images/Печенье/Снимок_экрана_от_2024-03-24_16-05-31.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:05:38.153Z",
+      "updated_at": "2024-03-24T13:05:38.153Z",
+      "slug": "pechene-sendvich-s-kokosovym-vkusom"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "4764d8d1-aec1-41a0-a5b5-05a2e43cd652",
+    "fields": {
+      "product_name": "«Яшкино», вафли тонкие с кокосовым кремом, 144 г",
+      "supplier_id": 1,
+      "category_id": 2,
+      "description": "Хрустящие вафельки с нежнейшим кокосовым кремом. \r\n\r\n– Меньше вафельных слоев.  \r\n\r\n– С кокосовым маслом – источником энергии. \r\n\r\n– Без пальмового масла.  \r\n\r\nВес вафельки всего 6 г.",
+      "unit": "pieces",
+      "unit_price": "67.00",
+      "units_in_stock": 5,
+      "image_path": "product_images/Вафли/Снимок_экрана_от_2024-03-24_14-40-40.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:40:46.255Z",
+      "updated_at": "2024-03-24T11:40:46.255Z",
+      "slug": "yashkino-vafli-tonkie-s-kokosovym-kremom-144-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "4fb9d896-f0c6-47de-8944-fb82cf59f482",
+    "fields": {
+      "product_name": "«O'Zera», шоколад горький Dark & Extra Orange, 40 г",
+      "supplier_id": 1,
+      "category_id": 8,
+      "description": "Батончик из премиального шоколада с кусочками апельсина!\r\n\r\n40% шоколада и 60% апельсина.\r\n\r\n– Апельсиновые цукаты. \r\n\r\n– Какао из отборных какао-бобов. \r\n\r\n– Источник «гормона счастья». \r\n\r\n– Помощник для мозга.",
+      "unit": "pieces",
+      "unit_price": "67.00",
+      "units_in_stock": 40,
+      "image_path": "product_images/Батончики/Снимок_экрана_от_2024-03-24_14-25-52.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:26:00.164Z",
+      "updated_at": "2024-03-24T11:26:00.164Z",
+      "slug": "ozera-shokolad-gorkij-dark-extra-orange-40-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "525184d3-0d84-499a-a437-70f8a7ef5794",
+    "fields": {
+      "product_name": "Печенье «Вихарёк» со вкусом апельсина, сахарное",
+      "supplier_id": 1,
+      "category_id": 3,
+      "description": "Рассыпчатое печенье со вкусом апельсина, с глазирированным донышком.  \r\n\r\n– В натуральным маслом апельсина. \r\n\r\n– В сахарной посыпке. \r\n\r\n– Глазурь из отборных какао-бобов.",
+      "unit": "grams",
+      "unit_price": "33.00",
+      "units_in_stock": 4000,
+      "image_path": "product_images/Печенье/Снимок_экрана_от_2024-03-24_16-11-07.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:11:14.462Z",
+      "updated_at": "2024-03-24T13:11:14.462Z",
+      "slug": "pechene-viharyok-so-vkusom-apelsina-saharnoe"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "526e3dd3-23b8-48ad-a495-270bb76b27ee",
+    "fields": {
+      "product_name": "«O'Zera», шоколадный батончик Aerated, 32 г",
+      "supplier_id": 1,
+      "category_id": 8,
+      "description": "Благородный шоколад с пористой воздушной начинкой. \r\n\r\n– Какао из отборных какао-бобов. \r\n\r\n– Море пузырьков!",
+      "unit": "pieces",
+      "unit_price": "37.00",
+      "units_in_stock": 16,
+      "image_path": "product_images/Батончики/Снимок_экрана_от_2024-03-24_14-19-06.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:19:15.754Z",
+      "updated_at": "2024-03-24T11:33:16.561Z",
+      "slug": "ozera-shokoladnyj-batonchik-aerated-32-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "5320325b-a5a0-4ff3-974d-e880f381aac4",
+    "fields": {
+      "product_name": "«Яшкино», вафли мягкие с вишневым джемом, 40 г",
+      "supplier_id": 1,
+      "category_id": 2,
+      "description": "По домашнему рецепту!  Выпечены в чугунных вафельницах! \r\n\r\nНа фабрике вафли выпекают в вафельницах, подобных тем, что используют хозяйки в домашних условиях. Именно этот способ сохраняет  любимый вкус и рисунок, знакомый с детства.\r\n\r\n– На свежем отборном яйце. \r\n\r\n– С вишневым джемом.",
+      "unit": "pieces",
+      "unit_price": "25.00",
+      "units_in_stock": 5,
+      "image_path": "product_images/Вафли/Снимок_экрана_от_2024-03-24_14-54-06.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:54:14.167Z",
+      "updated_at": "2024-03-24T11:54:14.167Z",
+      "slug": "yashkino-vafli-myagkie-s-vishnevym-dzhemom-40-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "547660ff-1a19-4504-9f76-2974deec0d55",
+    "fields": {
+      "product_name": "Конфеты «Чио Рио»",
+      "supplier_id": 1,
+      "category_id": 6,
+      "description": "Конфеты с завораживающим вкусом: с мягкой карамелью и хрустящими бисквитныими шариками. \r\n\r\n– Глазурь из отборных какао-бобов.",
+      "unit": "grams",
+      "unit_price": "50.00",
+      "units_in_stock": 2000,
+      "image_path": "product_images/Конфеты/Снимок_экрана_от_2024-03-24_15-52-14.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:52:21.809Z",
+      "updated_at": "2024-03-24T12:52:21.809Z",
+      "slug": "konfety-chio-rio"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "5525075a-b1d4-4112-b27a-392c2ce11f4e",
+    "fields": {
+      "product_name": "«Яшкино», рулет бисквитный вишнёвый, 200 г",
+      "supplier_id": 1,
+      "category_id": 5,
+      "description": "По-домашнему вкусный шоколадный бисквит с нежным кремом и вишневым джемом. Швейцарская рецептура!     \r\n\r\n– С цельным сгущенным молоком. \r\n\r\n– С вишневым пюре.  \r\n\r\nБисквитный рулет украшен глазурью.",
+      "unit": "pieces",
+      "unit_price": "95.00",
+      "units_in_stock": 2,
+      "image_path": "product_images/Торты, рулеты, кексы/Снимок_экрана_от_2024-03-24_16-23-03.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:23:11.155Z",
+      "updated_at": "2024-03-24T13:23:11.155Z",
+      "slug": "yashkino-rulet-biskvitnyj-vishnyovyj-200-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "5d81c3f0-3354-4807-b008-260e8c2205b3",
+    "fields": {
+      "product_name": "Печенье-сэндвич с клубничным кремом, затяжное",
+      "supplier_id": 1,
+      "category_id": 3,
+      "description": "Хрустящее печенье с нежным клубничным кремом. \r\n\r\n– С соком натуральной клубники.",
+      "unit": "grams",
+      "unit_price": "37.00",
+      "units_in_stock": 3400,
+      "image_path": "product_images/Печенье/Снимок_экрана_от_2024-03-24_16-06-44.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:06:52.687Z",
+      "updated_at": "2024-03-24T13:06:52.687Z",
+      "slug": "pechene-sendvich-s-klubnichnym-kremom-zatyazhnoe"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "5dcad69d-b541-4961-81d1-0347b8fe4f23",
+    "fields": {
+      "product_name": "«KrutFrut», мармелад жевательный в форме кубиков",
+      "supplier_id": 1,
+      "category_id": 9,
+      "description": "Ассорти вкусов: арбуза, клубники, банана, вишни и апельсина. \r\n\r\nСоедини два вкуса и получи третий!  \r\n\r\nАрбуз + клубника = тропическая дыня. \r\nБанан + апельсин = баблгам. \r\nВишня + апельсин = фруктовый пунш.\r\n\r\n– 0% жира.  \r\n\r\n– С натуральными соками. \r\n\r\n– В форме кубиков.",
+      "unit": "grams",
+      "unit_price": "35.00",
+      "units_in_stock": 2000,
+      "image_path": "product_images/Зефир, мармелад/Снимок_экрана_от_2024-03-24_15-31-40.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:31:47.779Z",
+      "updated_at": "2024-03-24T12:31:47.779Z",
+      "slug": "krutfrut-marmelad-zhevatelnyj-v-forme-kubikov"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "5e10d468-71c0-4dff-8efb-3d7b3e81a643",
+    "fields": {
+      "product_name": "Зефир ванильный",
+      "supplier_id": 1,
+      "category_id": 9,
+      "description": "Зефир на 100% натуральном яблочном пюре. Классическая рецептура! \r\n\r\n– 0% жира. \r\n\r\n– На яблочном пектине – природном загустителе. \r\n\r\n– Без консервантов.",
+      "unit": "pieces",
+      "unit_price": "40.00",
+      "units_in_stock": 3000,
+      "image_path": "product_images/Зефир, мармелад/Снимок_экрана_от_2024-03-24_15-36-30.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:36:38.461Z",
+      "updated_at": "2024-03-24T12:36:38.461Z",
+      "slug": "zefir-vanilnyj"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "6210b113-0ba5-4122-8da4-f94b3fc7fc0c",
+    "fields": {
+      "product_name": "«O'Zera», молочный шоколад с желейной клубничной начинкой Milk & Strawberry filling, 24 г",
+      "supplier_id": 1,
+      "category_id": 7,
+      "description": "Уникальный тонкий шоколад – всего 6 мм! С начинкой из клубники! \r\n\r\nНет аналогов в России! \r\n\r\n– Какао из отборных какао-бобов. \r\n\r\n– С соком клубники.   \r\n\r\n– «Гормон счастья» за считанные минуты! \r\n\r\nВес шоколадки 24 г.\r\n\r\nВ упаковке 30 шоколадок.",
+      "unit": "pieces",
+      "unit_price": "23.00",
+      "units_in_stock": 10,
+      "image_path": "product_images/Шоколад/Снимок_экрана_от_2024-03-24_17-07-13.png",
+      "is_active": true,
+      "created_at": "2024-03-24T14:07:22.853Z",
+      "updated_at": "2024-03-24T14:07:22.853Z",
+      "slug": "ozera-molochnyj-shokolad-s-zhelejnoj-klubnichnoj-nachinkoj-milk-strawberry-filling-24-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "67b96631-d3f8-4e5c-ae73-ec102badcfe3",
+    "fields": {
+      "product_name": "«Яшкино», рулет бисквитный черничный, 200 г",
+      "supplier_id": 1,
+      "category_id": 5,
+      "description": "По-домашнему вкусный шоколадный бисквит с нежным кремом и черничным джемом. Швейцарская рецептура!     \r\n\r\n– С цельным сгущенным молоком. \r\n\r\n– С черничным пюре.  \r\n\r\nБисквитный рулет украшен глазурью.",
+      "unit": "pieces",
+      "unit_price": "95.00",
+      "units_in_stock": 2,
+      "image_path": "product_images/Торты, рулеты, кексы/Снимок_экрана_от_2024-03-24_16-22-36.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:22:42.679Z",
+      "updated_at": "2024-03-24T13:22:42.679Z",
+      "slug": "yashkino-rulet-biskvitnyj-chernichnyj-200-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "6c04f660-d420-4b5e-88b6-84b9185f686c",
+    "fields": {
+      "product_name": "«O'Zera», конфеты шоколадные Coconut cream",
+      "supplier_id": 1,
+      "category_id": 6,
+      "description": "Молочный шоколад с кремовой кокосовой начинкой с добавлением кокосовой стружки. \r\n\r\n– Молочный шоколад из отборных какао-бобов.\r\n\r\n– Стружка и сливки из спелого кокоса.",
+      "unit": "grams",
+      "unit_price": "87.00",
+      "units_in_stock": 2000,
+      "image_path": "product_images/Конфеты/Снимок_экрана_от_2024-03-24_15-50-04.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:50:12.741Z",
+      "updated_at": "2024-03-24T12:51:22.960Z",
+      "slug": "ozera-konfety-shokoladnye-coconut-cream"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "6cc7ef25-cce1-409a-a2a1-f7dd61b1fe15",
+    "fields": {
+      "product_name": "«O'Zera», шоколадный батончик White with strawberry crisps and popping candy, 45 г",
+      "supplier_id": 1,
+      "category_id": 8,
+      "description": "Нежнейший шоколад цвета слоновой кости с кусочками натуральной клубники.\r\n\r\n– С какао-маслом – источником витамина К.\r\n\r\n– С криспами – высушенной клубникой.\r\n\r\n– Со взрывной карамелью.",
+      "unit": "pieces",
+      "unit_price": "69.00",
+      "units_in_stock": 60,
+      "image_path": "product_images/Батончики/42488.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:05:02.844Z",
+      "updated_at": "2024-03-24T11:33:32.244Z",
+      "slug": "ozera-shokoladnyj-batonchik-white-with-strawberry-crisps-and-popping-candy-45-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "6f1fffe9-391d-43f0-9582-34a89d46528d",
+    "fields": {
+      "product_name": "«O'Zera», конфеты Creamy-Hazelnut",
+      "supplier_id": 1,
+      "category_id": 6,
+      "description": "Вафельные пирамидки с молочно-ореховой начинкой, в молочном шоколаде. \r\n\r\n– Паста из отборного фундука.   \r\n\r\n– Цельное молоко. \r\n\r\n– 100% молочный шоколад.",
+      "unit": "grams",
+      "unit_price": "75.00",
+      "units_in_stock": 2000,
+      "image_path": "product_images/Конфеты/Снимок_экрана_от_2024-03-24_15-42-29.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:42:34.800Z",
+      "updated_at": "2024-03-24T12:42:34.800Z",
+      "slug": "ozera-konfety-creamy-hazelnut"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "73095c30-ae27-4f3b-aca0-161eb358d377",
+    "fields": {
+      "product_name": "«O'Zera», шоколад молочный Extra Milk &Sea Salted caramel, 45 г",
+      "supplier_id": 1,
+      "category_id": 8,
+      "description": "Нежный шоколад с повышенным содержанием молока с солёной карамелью. \r\n\r\n– С герандской солью, богатой витаминами и минералами.  \r\n\r\n– Какао из отборных какао-бобов.",
+      "unit": "pieces",
+      "unit_price": "55.00",
+      "units_in_stock": 45,
+      "image_path": "product_images/Батончики/Снимок_экрана_от_2024-03-24_14-14-57.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:15:04.869Z",
+      "updated_at": "2024-03-24T11:33:01.129Z",
+      "slug": "ozera-shokolad-molochnyj-extra-milk-sea-salted-caramel-45-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "7722ab56-bca5-402c-b0a9-33269d4dd041",
+    "fields": {
+      "product_name": "«O'Zera», шоколадные конфеты «Трюфель в молочном шоколаде», 197 г",
+      "supplier_id": 1,
+      "category_id": 6,
+      "description": "Конфеты с нежной трюфельной начинкой в великолепном молочном шоколаде.   \r\n\r\n– Шоколад из отборных какао-бобов. \r\n\r\nКонфеты в стильной упаковке – готовое решение к праздникам! Хотя для этого десерта не нужен повод. Наслаждайтесь!",
+      "unit": "pieces",
+      "unit_price": "330.00",
+      "units_in_stock": 1,
+      "image_path": "product_images/Конфеты/Снимок_экрана_от_2024-03-24_15-45-27.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:45:34.487Z",
+      "updated_at": "2024-03-24T12:45:34.487Z",
+      "slug": "ozera-shokoladnye-konfety-tryufel-v-molochnom-shokolade-197-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "7abfd8a7-8ab3-4197-bd29-9b6bdb085e28",
+    "fields": {
+      "product_name": "«O'Zera», шоколад горький Dark & Red berries, 40 г",
+      "supplier_id": 1,
+      "category_id": 8,
+      "description": "Батончик из премиального шоколада с малиной и вишней.\r\n\r\n40% шоколада и 60% ягодной начинки. \r\n\r\n– Сушеная вишня и сок малины. \r\n\r\n– Какао из отборных какао-бобов. \r\n\r\n– Источник «гормона счастья». \r\n\r\n– Помощник для мозга.",
+      "unit": "pieces",
+      "unit_price": "78.00",
+      "units_in_stock": 35,
+      "image_path": "product_images/Батончики/Снимок_экрана_от_2024-03-24_14-25-11.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:25:18.068Z",
+      "updated_at": "2024-03-24T11:25:18.068Z",
+      "slug": "ozera-shokolad-gorkij-dark-red-berries-40-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "7df32d13-637a-4d8e-be6e-a3b48ea84b46",
+    "fields": {
+      "product_name": "«BabyFox», мармелад жевательный с соком ягод и фруктов, 70 г",
+      "supplier_id": 1,
+      "category_id": 9,
+      "description": "Мармелад из 100% натуральных соков яблока, вишни, клубники, лимона, апельсина и черной смородины. \r\n\r\n– 0% жира. \r\n\r\n– С витаминами C, В5, B6, PP и фолиевой кислотой. \r\n\r\n–  В форме фигурок бегемотиков.",
+      "unit": "pieces",
+      "unit_price": "40.00",
+      "units_in_stock": 15,
+      "image_path": "product_images/Зефир, мармелад/Снимок_экрана_от_2024-03-24_15-32-18.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:32:24.490Z",
+      "updated_at": "2024-03-24T12:32:24.490Z",
+      "slug": "babyfox-marmelad-zhevatelnyj-s-sokom-yagod-i-fruktov-70-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "7e0d23f9-ee71-417c-bc8a-ed9bbae02a6a",
+    "fields": {
+      "product_name": "Печенье «Овсяночка», сдобное",
+      "supplier_id": 1,
+      "category_id": 3,
+      "description": "По-домашнему вкусное хрустящее овсяное печенье.  \r\n\r\n– С овсяной мукой.   \r\n\r\n– С натуральной корицей.",
+      "unit": "grams",
+      "unit_price": "40.00",
+      "units_in_stock": 2000,
+      "image_path": "product_images/Печенье/Снимок_экрана_от_2024-03-24_16-15-13.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:15:20.206Z",
+      "updated_at": "2024-03-24T13:15:20.206Z",
+      "slug": "pechene-ovsyanochka-sdobnoe"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "7fcbb60f-861b-49ba-9200-730664c184db",
+    "fields": {
+      "product_name": "«Яшкино», печенье «Апельсин», сдобное, 137 г",
+      "supplier_id": 1,
+      "category_id": 3,
+      "description": "Бисквитное печенье с апельсиновым желе, в глазури. \r\n\r\n– С соком апельсина. \r\n\r\n– Глазурь из отборных какао-бобов. \r\n\r\nВ упаковке 11 печенек.",
+      "unit": "pieces",
+      "unit_price": "82.00",
+      "units_in_stock": 2,
+      "image_path": "product_images/Печенье/Снимок_экрана_от_2024-03-24_16-08-36.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:08:46.923Z",
+      "updated_at": "2024-03-24T13:08:46.923Z",
+      "slug": "yashkino-pechene-apelsin-sdobnoe-137-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "81309f1b-726c-4ab6-b102-bde37427b1fa",
+    "fields": {
+      "product_name": "«O'Zera», конфеты шоколадные «Вкус радостного утра», 180 г",
+      "supplier_id": 1,
+      "category_id": 6,
+      "description": "Цельный фундук в великолепном молочном шоколаде. \r\n\r\n– Крупный фундук.   \r\n\r\n– Шоколад из отборных какао-бобов. \r\n \r\nИсточник энергии и отличного настроения!",
+      "unit": "pieces",
+      "unit_price": "420.00",
+      "units_in_stock": 2,
+      "image_path": "product_images/Конфеты/Снимок_экрана_от_2024-03-24_15-41-11.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:41:18.952Z",
+      "updated_at": "2024-03-24T12:41:18.952Z",
+      "slug": "ozera-konfety-shokoladnye-vkus-radostnogo-utra-180-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "8412e9c4-83a8-4c33-ac04-3583f651d2ce",
+    "fields": {
+      "product_name": "«Яшкино», вафли с варёной сгущёнкой, 200 г",
+      "supplier_id": 1,
+      "category_id": 2,
+      "description": "Семь слоев хрустящих вафель с начинкой со вкусом вареной сгущенки. \r\n\r\n– Много начинки. \r\n\r\n– Какао из отборных какао-бобов.",
+      "unit": "pieces",
+      "unit_price": "75.00",
+      "units_in_stock": 2,
+      "image_path": "product_images/Вафли/Снимок_экрана_от_2024-03-24_14-39-56.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:40:02.334Z",
+      "updated_at": "2024-03-24T11:40:02.334Z",
+      "slug": "yashkino-vafli-s-varyonoj-sgushyonkoj-200-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "8a04481e-54d6-48ed-8af3-8c0e3f7c277f",
+    "fields": {
+      "product_name": "«Яшкино», печенье «Клубника», сдобное, 137 г",
+      "supplier_id": 1,
+      "category_id": 3,
+      "description": "Бисквитное печенье с клубничным желе, в глазури. \r\n\r\n– С соком клубники.  \r\n\r\n– Глазурь из отборных какао-бобов. \r\n\r\nВ упаковке 11 печенек.",
+      "unit": "pieces",
+      "unit_price": "82.00",
+      "units_in_stock": 2,
+      "image_path": "product_images/Печенье/Снимок_экрана_от_2024-03-24_16-09-28.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:09:34.957Z",
+      "updated_at": "2024-03-24T13:09:34.957Z",
+      "slug": "yashkino-pechene-klubnika-sdobnoe-137-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "8b8196c6-4df1-4dee-92ce-cef8b6749c05",
+    "fields": {
+      "product_name": "«Яшкино», рулет бисквитный клубничный со сливками, 200 г",
+      "supplier_id": 1,
+      "category_id": 5,
+      "description": "По-домашнему вкусный бисквит с нежным кремом и клубничным джемом. Швейцарская рецептура!    \r\n\r\n– С цельным сгущенным молоком. \r\n\r\n– С клубничным пюре.  \r\n\r\nБисквитный рулет украшен глазурью.",
+      "unit": "pieces",
+      "unit_price": "95.00",
+      "units_in_stock": 2,
+      "image_path": "product_images/Торты, рулеты, кексы/Снимок_экрана_от_2024-03-24_16-23-32.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:23:42.194Z",
+      "updated_at": "2024-03-24T13:23:42.194Z",
+      "slug": "yashkino-rulet-biskvitnyj-klubnichnyj-so-slivkami-200-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "8e1e2c28-b961-463a-ae38-5d503d94fccc",
+    "fields": {
+      "product_name": "«Яшкино», вафли «Сливочные», 200 г",
+      "supplier_id": 1,
+      "category_id": 2,
+      "description": "Семь слоев хрустящих вафель с начинкой со сливочным вкусом.  \r\n\r\n– Много начинки.",
+      "unit": "pieces",
+      "unit_price": "75.00",
+      "units_in_stock": 5,
+      "image_path": "product_images/Вафли/Снимок_экрана_от_2024-03-24_14-38-30.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:38:39.403Z",
+      "updated_at": "2024-03-24T11:38:39.403Z",
+      "slug": "yashkino-vafli-slivochnye-200-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "97e5af81-a570-4dc5-a661-330cb6129364",
+    "fields": {
+      "product_name": "«Smart Formula», мармелад жевательный Say no to sugar Манго-ананас-маракуйя-гранат, 70 г",
+      "supplier_id": 1,
+      "category_id": 9,
+      "description": "Мармелад без сахара! \r\n\r\nАссорти вкусов: манго, ананас, маракуйя, гранат. \r\n\r\n– 0% жира. \r\n\r\n– С натуральными соками и пюре.  \r\n\r\n– Обогащен витаминами С и группы В.",
+      "unit": "pieces",
+      "unit_price": "43.00",
+      "units_in_stock": 43,
+      "image_path": "product_images/Зефир, мармелад/Снимок_экрана_от_2024-03-24_15-29-05.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:29:30.204Z",
+      "updated_at": "2024-03-24T12:29:30.204Z",
+      "slug": "smart-formula-marmelad-zhevatelnyj-say-no-to-sugar-mango-ananas-marakujya-granat-70-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "98f0c147-272c-45a4-b028-2b0212434803",
+    "fields": {
+      "product_name": "«O'Zera», шоколадный батончик White & Cookies, 45 г",
+      "supplier_id": 1,
+      "category_id": 8,
+      "description": "Нежнейший шоколад цвета слоновой кости с кусочками печенья с какао.\r\n\r\n– С какао из отборных какао-бобов.\r\n\r\n– С какао-маслом – источником витамина К.",
+      "unit": "pieces",
+      "unit_price": "55.00",
+      "units_in_stock": 60,
+      "image_path": "product_images/Батончики/Снимок_экрана_от_2024-03-24_14-10-18.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:10:30.364Z",
+      "updated_at": "2024-03-24T11:33:24.698Z",
+      "slug": "ozera-shokoladnyj-batonchik-white-cookies-45-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "99e09a5d-1899-40c8-b9a5-5c53370dc61b",
+    "fields": {
+      "product_name": "«O'Zera», конфеты с фундуком и миндалем",
+      "supplier_id": 1,
+      "category_id": 6,
+      "description": "Конфеты с дробленым фундуком и миндалем в великолепном молочном шоколаде. \r\n\r\n– Отборные орехи. \r\n\r\n– Шоколад из отборных какао-бобов.",
+      "unit": "grams",
+      "unit_price": "85.00",
+      "units_in_stock": 1000,
+      "image_path": "product_images/Конфеты/Снимок_экрана_от_2024-03-24_15-53-48.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:53:56.335Z",
+      "updated_at": "2024-03-24T12:57:54.604Z",
+      "slug": "ozera-konfety-s-fundukom-i-mindalem"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "9b036ddd-3860-4ad8-86c0-9e2070a17f1f",
+    "fields": {
+      "product_name": "Рулетики вафельные с шоколадным вкусом",
+      "supplier_id": 1,
+      "category_id": 2,
+      "description": "Тонкие хрустящие вафли в форме рулетика.  \r\n\r\n– Без консервантов. \r\n\r\n– С кокосовым маслом. \r\n\r\nМасло уникально!  На 90% состоит из насыщенных жирных кислот, которые яляются источником энергии для организма.",
+      "unit": "grams",
+      "unit_price": "30.00",
+      "units_in_stock": 3000,
+      "image_path": "product_images/Вафли/Снимок_экрана_от_2024-03-24_14-49-11.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:49:20.806Z",
+      "updated_at": "2024-03-24T11:49:20.806Z",
+      "slug": "ruletiki-vafelnye-s-shokoladnym-vkusom"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "9ba1d224-caf4-46e6-b2f6-5228b5cdafc7",
+    "fields": {
+      "product_name": "«Liberty Orchards», козинак кунжутный, 38 г",
+      "supplier_id": 1,
+      "category_id": 10,
+      "description": "Хрустящая восточная сладость: обжаренные семена в сиропе. \r\n\r\n– Отборный кунжут.   \r\n\r\n– Кладезь витаминов А, С, Е, B. \r\n\r\n– Источник кальция.  \r\n\r\n Один козинак – треть суточной нормы кальция.",
+      "unit": "pieces",
+      "unit_price": "25.00",
+      "units_in_stock": 3,
+      "image_path": "product_images/Халва, козинаки/Снимок_экрана_от_2024-03-24_16-24-52.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:24:59.541Z",
+      "updated_at": "2024-03-24T13:24:59.541Z",
+      "slug": "liberty-orchards-kozinak-kunzhutnyj-38-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "a25b397f-e9a7-405d-93e4-da2417edbd04",
+    "fields": {
+      "product_name": "Вафли «Южная страна»",
+      "supplier_id": 1,
+      "category_id": 2,
+      "description": "Семь слоев хрустящих вафель с начинкой из 100% натурального какао и прослойкой со вкусом ванили. \r\n\r\n– Много начинки. \r\n\r\n– Какао из отборных какао-бобов.",
+      "unit": "grams",
+      "unit_price": "30.00",
+      "units_in_stock": 5000,
+      "image_path": "product_images/Вафли/Снимок_экрана_от_2024-03-24_14-51-26.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:51:38.089Z",
+      "updated_at": "2024-03-24T11:51:38.089Z",
+      "slug": "vafli-yuzhnaya-strana"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "a2908164-038e-4616-b7d1-9c6e1def7955",
+    "fields": {
+      "product_name": "«O'Zera», шоколад молочный Extra milk & Hazelnut, 45 г",
+      "supplier_id": 1,
+      "category_id": 8,
+      "description": "Нежнейший шоколад с повышенным содержанием молока и кусочками обжаренного фундука!\r\n\r\n– Какао из отборных какао-бобов. \r\n\r\n– Отборный фундук. \r\n\r\n– Источник «гормона счастья». \r\n\r\n– Помощник для мозга.",
+      "unit": "pieces",
+      "unit_price": "55.00",
+      "units_in_stock": 60,
+      "image_path": "product_images/Батончики/Снимок_экрана_от_2024-03-24_14-15-48.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:15:54.117Z",
+      "updated_at": "2024-03-24T11:32:56.995Z",
+      "slug": "ozera-shokolad-molochnyj-extra-milk-hazelnut-45-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "a5c8d16b-162c-4426-856a-8d4417a21cd1",
+    "fields": {
+      "product_name": "«O'Zera», шоколад молочный Extra milk, 45 г",
+      "supplier_id": 1,
+      "category_id": 8,
+      "description": "Нежнейший шоколад с повышенным содержанием молока, обволакивающими сливочными нотами.\r\n\r\n– Какао из отборных какао-бобов.\r\n\r\n– Источник «гормона счастья».\r\n\r\n– Помощник для мозга.",
+      "unit": "pieces",
+      "unit_price": "55.00",
+      "units_in_stock": 60,
+      "image_path": "product_images/Батончики/orig_CMnSgIH.jpg",
+      "is_active": true,
+      "created_at": "2024-03-24T10:43:35.873Z",
+      "updated_at": "2024-03-24T11:32:53.389Z",
+      "slug": "ozera-extra-milk-45"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "aa2a9982-c4c1-4c6b-b17c-81628da164c9",
+    "fields": {
+      "product_name": "«O'Zera», шоколадный батончик Lemon & Ginger, 50 г",
+      "supplier_id": 1,
+      "category_id": 8,
+      "description": "Нежный шоколад с повышенным содержанием молока, с имбирем и соком лимона.   \r\n\r\n– С молотым имбирем.\r\n\r\n– С лимоном.   \r\n\r\n– Какао из отборных какао-бобов.",
+      "unit": "pieces",
+      "unit_price": "50.00",
+      "units_in_stock": 50,
+      "image_path": "product_images/Батончики/Снимок_экрана_от_2024-03-24_14-32-30.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:32:39.893Z",
+      "updated_at": "2024-03-24T11:32:39.893Z",
+      "slug": "ozera-shokoladnyj-batonchik-lemon-ginger-50-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "ad0d5d80-fdc7-4cfa-98b7-05622446ab09",
+    "fields": {
+      "product_name": "«O'Zera», шоколадный батончик White & Almonds, 45 г",
+      "supplier_id": 1,
+      "category_id": 8,
+      "description": "Нежнейший шоколад цвета слоновой кости с дробленым миндалем.\r\n\r\n– С какао-маслом – источником витамина К.\r\n\r\n– С отборным орехом.",
+      "unit": "pieces",
+      "unit_price": "55.00",
+      "units_in_stock": 60,
+      "image_path": "product_images/Батончики/42486.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:01:58.782Z",
+      "updated_at": "2024-03-24T11:33:20.462Z",
+      "slug": "ozera-shokoladnyj-batonchik-white-almonds-45-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "ae78453c-9b78-46b7-9c60-70a693a159c5",
+    "fields": {
+      "product_name": "«O'Zera», конфеты шоколадные «Вкус успешного дня», 195 г",
+      "supplier_id": 1,
+      "category_id": 6,
+      "description": "Уникальные трехслойные конфеты: пралине с фундуком и миндалем в великолепном молочном шоколаде.  \r\n\r\n– Фундук и миндаль высшей категории.  \r\n\r\n– Шоколад из отборных какао-бобов. \r\n\r\nИсточник энергии и отличного настроения!",
+      "unit": "pieces",
+      "unit_price": "415.00",
+      "units_in_stock": 2,
+      "image_path": "product_images/Конфеты/Снимок_экрана_от_2024-03-24_15-39-56.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:40:02.393Z",
+      "updated_at": "2024-03-24T12:40:02.393Z",
+      "slug": "ozera-konfety-shokoladnye-vkus-uspeshnogo-dnya-195-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "ae938efa-20d7-4c68-a921-6ea68767e816",
+    "fields": {
+      "product_name": "Зефир ванильный глазированный",
+      "supplier_id": 1,
+      "category_id": 9,
+      "description": "Зефир на 100% натуральном яблочном пюре, в глазури. Классическая рецептура! \r\n\r\n– 0% жира. \r\n\r\n– На яблочном пектине – природном загустителе. \r\n\r\n– Без консервантов.",
+      "unit": "grams",
+      "unit_price": "40.00",
+      "units_in_stock": 3000,
+      "image_path": "product_images/Зефир, мармелад/Снимок_экрана_от_2024-03-24_15-35-58.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:36:06.083Z",
+      "updated_at": "2024-03-24T12:36:06.083Z",
+      "slug": "zefir-vanilnyj-glazirovannyj"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "b3fde349-ede1-428d-8df7-cff025265eb0",
+    "fields": {
+      "product_name": "Печенье «С каплями», сдобное",
+      "supplier_id": 1,
+      "category_id": 3,
+      "description": "По-домашнему вкусное хрустящее печенье с каплями.\r\n\r\n– С овсяными хлопьями – клетчатка.",
+      "unit": "grams",
+      "unit_price": "36.00",
+      "units_in_stock": 4500,
+      "image_path": "product_images/Печенье/Снимок_экрана_от_2024-03-24_16-11-59.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:12:06.711Z",
+      "updated_at": "2024-03-24T13:12:06.711Z",
+      "slug": "pechene-s-kaplyami-sdobnoe"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "b8e11178-7445-4882-aaa7-328ffc211599",
+    "fields": {
+      "product_name": "Печенье–сэндвич с шоколадно-сливочным вкусом",
+      "supplier_id": 1,
+      "category_id": 3,
+      "description": "Хрустящее печенье с какао и нежным сливочным кремом.  \r\n\r\n– Со сливками. \r\n\r\n– С какао из отборных какао-бобов.",
+      "unit": "grams",
+      "unit_price": "40.00",
+      "units_in_stock": 3400,
+      "image_path": "product_images/Печенье/Снимок_экрана_от_2024-03-24_16-04-37.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:04:45.204Z",
+      "updated_at": "2024-03-24T13:04:45.204Z",
+      "slug": "pechenesendvich-s-shokoladno-slivochnym-vkusom"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "ba84178b-f115-4f55-8035-7895752d74ff",
+    "fields": {
+      "product_name": "«Яшкино», вафли тонкие с кремом с клубничным вкусом, 144 г",
+      "supplier_id": 1,
+      "category_id": 2,
+      "description": "Хрустящие вафельки с нежнейшим клубничным кремом. \r\n\r\n– Меньше вафельных слоев.  \r\n\r\n– С кокосовым маслом – источником энергии. \r\n\r\n– Без пальмового масла.  \r\n\r\nВес вафельки всего 6 г.",
+      "unit": "pieces",
+      "unit_price": "72.00",
+      "units_in_stock": 2,
+      "image_path": "product_images/Вафли/Снимок_экрана_от_2024-03-24_14-44-02.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:44:15.073Z",
+      "updated_at": "2024-03-24T11:44:15.073Z",
+      "slug": "yashkino-vafli-tonkie-s-kremom-s-klubnichnym-vkusom-144-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "bad1b449-c732-435c-ab45-e50c7dfad306",
+    "fields": {
+      "product_name": "«O'Zera», шоколадный батончик Mango, 50 г",
+      "supplier_id": 1,
+      "category_id": 8,
+      "description": "Нежный шоколад с повышенным содержанием молока и начинкой из манго.  \r\n\r\n– С пюре и соком манго.  \r\n\r\n– Какао из отборных какао-бобов.",
+      "unit": "pieces",
+      "unit_price": "50.00",
+      "units_in_stock": 35,
+      "image_path": "product_images/Батончики/Снимок_экрана_от_2024-03-24_14-16-46.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:16:53.620Z",
+      "updated_at": "2024-03-24T11:33:08.291Z",
+      "slug": "ozera-shokoladnyj-batonchik-mango-50-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "bd457ed6-90ef-4d6d-9272-a4e21093b6c6",
+    "fields": {
+      "product_name": "Конфета «Крокант»",
+      "supplier_id": 1,
+      "category_id": 6,
+      "description": "Грильяж с миндалем и соленой карамелью, в глазури. \r\n \r\n – Отборный миндаль. \r\n \r\n – Глазурь из отборных какао-бобов.",
+      "unit": "grams",
+      "unit_price": "45.00",
+      "units_in_stock": 1000,
+      "image_path": "product_images/Конфеты/Снимок_экрана_от_2024-03-24_15-54-46.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:54:53.018Z",
+      "updated_at": "2024-03-24T12:54:53.018Z",
+      "slug": "konfeta-krokant"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "c3d250eb-43a5-42f0-b72a-c31dc867b511",
+    "fields": {
+      "product_name": "«Яшкино», вафли «Глазированные с орешками», 200 г",
+      "supplier_id": 1,
+      "category_id": 2,
+      "description": "Семь слоев хрустящих вафель с начинкой из 100% натурального какао и фундука,  в глазури.  \r\n\r\n– Много начинки. \r\n\r\n– Отборный фундук. \r\n\r\n– Какао в начинке и глазури.",
+      "unit": "pieces",
+      "unit_price": "100.00",
+      "units_in_stock": 5,
+      "image_path": "product_images/Вафли/Снимок_экрана_от_2024-03-24_14-37-31.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:37:37.834Z",
+      "updated_at": "2024-03-24T11:37:37.834Z",
+      "slug": "yashkino-vafli-glazirovannye-s-oreshkami-200-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "caa8fde3-584a-42eb-8e06-400488f3b79e",
+    "fields": {
+      "product_name": "«Яшкино», пряники с вареной сгущенкой, 300 г",
+      "supplier_id": 1,
+      "category_id": 4,
+      "description": "Миниатюрные пряники с начинкой, в легкой сахарной глазури. Особо мягкие!\r\n\r\nБездрожжевое тесто замешано в два этапа. Тесто обязательно отдыхает, чтобы прянички получились пористыми и воздушными.\r\n\r\n– Пшеничная мука из зерна с собственных полей Алтая.  \r\n\r\n– С ржаной мукой, богатой витаминами и минералами. \r\n\r\n– Нежная начинка.",
+      "unit": "pieces",
+      "unit_price": "100.00",
+      "units_in_stock": 2,
+      "image_path": "product_images/Пряники/Снимок_экрана_от_2024-03-24_16-20-15.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:20:21.415Z",
+      "updated_at": "2024-03-24T13:20:21.415Z",
+      "slug": "yashkino-pryaniki-s-varenoj-sgushenkoj-300-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "d20d330d-cb35-41ae-a43e-8e9188f20cba",
+    "fields": {
+      "product_name": "«O'Zera», шоколадный батончик White & Strawberry cream, 45 г",
+      "supplier_id": 1,
+      "category_id": 8,
+      "description": "Нежнейший шоколад цвета слоновой кости с кремовой клубничной начинкой.\r\n\r\n– С какао-маслом – источником витамина К.\r\n\r\n– С соком клубники.",
+      "unit": "pieces",
+      "unit_price": "55.00",
+      "units_in_stock": 60,
+      "image_path": "product_images/Батончики/Снимок_экрана_от_2024-03-24_14-12-23.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:12:30.571Z",
+      "updated_at": "2024-03-24T11:33:28.799Z",
+      "slug": "ozera-shokoladnyj-batonchik-white-strawberry-cream-45-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "d24ab0f2-f5ad-416d-ab70-5c226b3f9cb2",
+    "fields": {
+      "product_name": "«O'Zera», шоколад молочный Extra milk & Strawberry with popping candy, 45 г",
+      "supplier_id": 1,
+      "category_id": 8,
+      "description": "Нежный шоколад с повышенным содержанием молока, с ягодой и взрывной карамелью. \r\n\r\n– С сушеной клубникой. \r\n\r\n– Какао из отборных какао-бобов.",
+      "unit": "pieces",
+      "unit_price": "82.00",
+      "units_in_stock": 30,
+      "image_path": "product_images/Батончики/Снимок_экрана_от_2024-03-24_14-13-50.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:13:58.698Z",
+      "updated_at": "2024-03-24T11:33:04.891Z",
+      "slug": "ozera-shokolad-molochnyj-extra-milk-strawberry-with-popping-candy-45-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "d2fc96d5-4aa6-4f18-b052-a7db15bda2c1",
+    "fields": {
+      "product_name": "Вафли «Глазированные с орешками»",
+      "supplier_id": 1,
+      "category_id": 2,
+      "description": "Семь слоев хрустящих вафель с начинкой из 100% натурального какао и фундука,  в глазури.  \r\n\r\n– Много начинки. \r\n\r\n– Отборный фундук. \r\n\r\n– Какао в начинке и глазури.",
+      "unit": "pieces",
+      "unit_price": "37.00",
+      "units_in_stock": 4000,
+      "image_path": "product_images/Вафли/Снимок_экрана_от_2024-03-24_14-52-24.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:52:35.740Z",
+      "updated_at": "2024-03-24T11:52:35.740Z",
+      "slug": "vafli-glazirovannye-s-oreshkami"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "d5dd8f12-6667-4489-8aa3-fbd6cf9bfd18",
+    "fields": {
+      "product_name": "Печенье «Зебра» с топлёным молоком, сахарное",
+      "supplier_id": 1,
+      "category_id": 3,
+      "description": "По-домашнему хрустящее печенье со вкусом топленого молока, с глазурью. \r\n\r\n– Какао из отборных какао-бобов. \r\n\r\n– Без консервантов.",
+      "unit": "grams",
+      "unit_price": "35.00",
+      "units_in_stock": 30000,
+      "image_path": "product_images/Печенье/Снимок_экрана_от_2024-03-24_16-07-39.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:07:48.340Z",
+      "updated_at": "2024-03-24T13:07:48.340Z",
+      "slug": "pechene-zebra-s-toplyonym-molokom-saharnoe"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "d913e792-52fd-448c-bf21-e28b573366a8",
+    "fields": {
+      "product_name": "«O'Zera», шоколадные конфеты «Пралине с цельным фундуком», 190 г",
+      "supplier_id": 1,
+      "category_id": 6,
+      "description": "",
+      "unit": "pieces",
+      "unit_price": "330.00",
+      "units_in_stock": 1,
+      "image_path": "product_images/Конфеты/Снимок_экрана_от_2024-03-24_15-45-59.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:46:06.624Z",
+      "updated_at": "2024-03-24T12:46:06.624Z",
+      "slug": "ozera-shokoladnye-konfety-praline-s-celnym-fundukom-190-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "d917df76-6d5e-4182-9961-82d3e3ce0d6a",
+    "fields": {
+      "product_name": "«KrutFrut», мармелад жевательный в форме забавных бутылочек, 70 г",
+      "supplier_id": 1,
+      "category_id": 9,
+      "description": "Ассорти вкусов: кола и лайм, вишня и кола, кола и ваниль.\r\n\r\n– 0% жира.  \r\n\r\n– С натуральными соками. \r\n\r\n– На яблочном пектине – природном загустителе.",
+      "unit": "pieces",
+      "unit_price": "36.00",
+      "units_in_stock": 10,
+      "image_path": "product_images/Зефир, мармелад/Снимок_экрана_от_2024-03-24_15-35-02.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:35:08.030Z",
+      "updated_at": "2024-03-24T12:35:08.030Z",
+      "slug": "krutfrut-marmelad-zhevatelnyj-v-forme-zabavnyh-butylochek-70-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "e4767bfa-ac35-475b-bcfe-8a550bb02f40",
+    "fields": {
+      "product_name": "«BabyFox», конфеты mini c молочной начинкой",
+      "supplier_id": 1,
+      "category_id": 6,
+      "description": "Уникальные mini-конфеты, разработанные специально для детей! С повышенным содержанием молока. \r\n \r\n– Много молока – источника кальция. \r\n \r\n– Отличный молочный шоколад. \r\n \r\nКонфеты в удобной упаковке с замком-липучкой, которую удобно закрывать и открывать. Каждая mini-конфета в индивидуальной упаковке.",
+      "unit": "grams",
+      "unit_price": "100.00",
+      "units_in_stock": 2000,
+      "image_path": "product_images/Конфеты/Снимок_экрана_от_2024-03-24_15-57-14.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:57:23.958Z",
+      "updated_at": "2024-03-24T12:57:23.958Z",
+      "slug": "babyfox-konfety-mini-c-molochnoj-nachinkoj"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "e826a188-4255-4a11-b37f-3921adca161a",
+    "fields": {
+      "product_name": "«O'Zera», шоколадные конфеты White Cream",
+      "supplier_id": 1,
+      "category_id": 6,
+      "description": "Нежнейший шоколад с белой кремовой начинкой. \r\n\r\n– Молочный шоколад из отборных какао-бобов. \r\n\r\n– Крем с молочным вкусом.",
+      "unit": "grams",
+      "unit_price": "95.00",
+      "units_in_stock": 1000,
+      "image_path": "product_images/Конфеты/Снимок_экрана_от_2024-03-24_15-55-46.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:55:53.497Z",
+      "updated_at": "2024-03-24T12:55:53.497Z",
+      "slug": "ozera-shokoladnye-konfety-white-cream"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "e86c3aa3-651e-4f1d-a2df-5e42239a53ed",
+    "fields": {
+      "product_name": "«Яшкино», вафли «Шоколадные», 200 г",
+      "supplier_id": 1,
+      "category_id": 2,
+      "description": "Семь слоев хрустящих вафель с начинкой из 100% натурального какао.\r\n\r\n– Много начинки. \r\n\r\n– Какао и какао-масло из отборных какао-бобов.",
+      "unit": "pieces",
+      "unit_price": "82.00",
+      "units_in_stock": 2,
+      "image_path": "product_images/Вафли/Снимок_экрана_от_2024-03-24_14-39-17.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:39:23.407Z",
+      "updated_at": "2024-03-24T11:39:23.407Z",
+      "slug": "yashkino-vafli-shokoladnye-200-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "effe5fc1-ca88-47d9-b938-a459d7d4f2e2",
+    "fields": {
+      "product_name": "«BabyFox», шоколадный батончик с молочной начинкой, 45 г",
+      "supplier_id": 1,
+      "category_id": 8,
+      "description": "100% натуральный шоколад с молочной начинкой.   \r\n\r\nС повышенным содержанием молока – более 25%!\r\n\r\n– Какао из отборных какао-бобов.  \r\n\r\n– Помощник для мозга.",
+      "unit": "pieces",
+      "unit_price": "45.00",
+      "units_in_stock": 60,
+      "image_path": "product_images/Батончики/Снимок_экрана_от_2024-03-24_14-24-13.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:24:22.705Z",
+      "updated_at": "2024-03-24T11:24:22.705Z",
+      "slug": "babyfox-shokoladnyj-batonchik-s-molochnoj-nachinkoj-45-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "f2f8e7a9-32da-4474-ba87-aabc178be179",
+    "fields": {
+      "product_name": "«Яшкино», пряники с малиновой начинкой, 300 г",
+      "supplier_id": 1,
+      "category_id": 4,
+      "description": "Миниатюрные пряники с начинкой, в легкой сахарной глазури. Особо мягкие! \r\n\r\nБездрожжевое тесто замешано в два этапа. Тесто обязательно отдыхает, чтобы прянички получились пористыми и воздушными.\r\n\r\n– Пшеничная мука из зерна с собственных полей Алтая.   \r\n\r\n– С ржаной мукой, богатой витаминами и минералами. \r\n\r\n– С натуральной малиной.",
+      "unit": "pieces",
+      "unit_price": "115.00",
+      "units_in_stock": 2,
+      "image_path": "product_images/Пряники/Снимок_экрана_от_2024-03-24_16-20-46.png",
+      "is_active": true,
+      "created_at": "2024-03-24T13:20:53.870Z",
+      "updated_at": "2024-03-24T13:20:53.870Z",
+      "slug": "yashkino-pryaniki-s-malinovoj-nachinkoj-300-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "f4713aee-d65c-40c0-b7ee-9f3c3968608b",
+    "fields": {
+      "product_name": "«O'Zera», шоколадные конфеты «Джандуйя из фундука и миндаля», 220 г",
+      "supplier_id": 1,
+      "category_id": 6,
+      "description": "Конфеты, изготовленные по итальянской технологии джандуйя: в их основе паста из шоколада и тщательно перетертого ореха. \r\n\r\n– Шоколад из отборных какао-бобов. \r\n\r\n– Отборный фундук и миндаль. \r\n\r\nКонфеты в стильной упаковке – готовое решение к праздникам!  Хотя для этого десерта не нужен повод. Наслаждайтесь!",
+      "unit": "pieces",
+      "unit_price": "360.00",
+      "units_in_stock": 1,
+      "image_path": "product_images/Конфеты/Снимок_экрана_от_2024-03-24_15-48-48.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:48:56.303Z",
+      "updated_at": "2024-03-24T12:48:56.303Z",
+      "slug": "ozera-shokoladnye-konfety-dzhandujya-iz-funduka-i-mindalya-220-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "f7569f05-7c52-4ba5-b64e-110afa02aee1",
+    "fields": {
+      "product_name": "«Яшкино», торт вафельный шоколадный с фундуком, глазированный, 250 г",
+      "supplier_id": 1,
+      "category_id": 2,
+      "description": "Десерт для особых случаев! \r\n\r\nШоколадный торт с шоколадно-ореховой начинкой, в глазури. \r\n\r\n– Шоколадно-ореховый крем. \r\n\r\n– Коржи с какао.\r\n\r\n– Отборный фундук. \r\n\r\nНаслаждайтесь любимым вкусом с теми, кто дорог!",
+      "unit": "pieces",
+      "unit_price": "150.00",
+      "units_in_stock": 5,
+      "image_path": "product_images/Вафли/Снимок_экрана_от_2024-03-24_14-50-23.png",
+      "is_active": true,
+      "created_at": "2024-03-24T11:50:34.155Z",
+      "updated_at": "2024-03-24T11:50:34.155Z",
+      "slug": "yashkino-tort-vafelnyj-shokoladnyj-s-fundukom-glazirovannyj-250-g"
+    }
+  },
+  {
+    "model": "candy_store.product",
+    "pk": "fdf363d4-ee72-424f-8f96-de8b9abca9f9",
+    "fields": {
+      "product_name": "«O'Zera», шоколадные конфеты Milk Cream",
+      "supplier_id": 1,
+      "category_id": 6,
+      "description": "Нежнейший  шоколад с молочно-шоколадной начинкой. \r\n\r\n– Молочный шоколад из отборных какао-бобов.",
+      "unit": "grams",
+      "unit_price": "95.00",
+      "units_in_stock": 1000,
+      "image_path": "product_images/Конфеты/Снимок_экрана_от_2024-03-24_15-56-26.png",
+      "is_active": true,
+      "created_at": "2024-03-24T12:56:35.065Z",
+      "updated_at": "2024-03-24T12:56:35.065Z",
+      "slug": "ozera-shokoladnye-konfety-milk-cream"
+    }
+  }
+]
