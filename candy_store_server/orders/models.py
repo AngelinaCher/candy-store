@@ -11,7 +11,7 @@ class Order(models.Model):
     cart_id = models.ForeignKey(to=Cart, on_delete=models.CASCADE, verbose_name='Козина')
     order_date = models.DateTimeField(verbose_name='Дата заказа', auto_now_add=True, null=False)
     required_date = models.DateTimeField(verbose_name='Требуемая дата')
-    total_price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Сумма')
+    total_price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Сумма', default=0)
     status = models.CharField(max_length=20, choices=(
         ('new', 'Новый'),
         ('in_progress', 'В обработке'),
@@ -20,9 +20,9 @@ class Order(models.Model):
     payment_method = models.CharField(max_length=20, choices=(
         ('CH', 'Наличные'),
         ('BC', 'Банковская карта'),
-    ))
-    created_up = models.DateTimeField(auto_now_add=True, verbose_name='Создано')
-    updated_up = models.DateTimeField(auto_now=True, verbose_name='Обновлено')
+    ), verbose_name='Метод оплаты')
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Создано')
+    updated_at = models.DateTimeField(auto_now=True, verbose_name='Обновлено')
 
     def __str__(self):
         return self.order_id

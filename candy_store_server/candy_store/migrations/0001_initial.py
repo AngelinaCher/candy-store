@@ -39,7 +39,7 @@ class Migration(migrations.Migration):
                 ('unit_price', models.DecimalField(decimal_places=2, max_digits=10, verbose_name='Цена за единицу')),
                 ('units_in_stock', models.PositiveIntegerField(verbose_name='Название товара')),
                 ('image_path', models.ImageField(blank=True, null=True, upload_to='product_images/', validators=[django.core.validators.FileExtensionValidator(allowed_extensions=['jpg', 'png', 'jpeg'])], verbose_name='Изображение')),
-                ('is_active', models.BooleanField(default=False, verbose_name='Название товара')),
+                ('is_active', models.BooleanField(default=False, verbose_name='Активность')),
                 ('created_at', models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')),
                 ('updated_at', models.DateTimeField(auto_now=True, verbose_name='Дата изменения')),
                 ('slug', models.SlugField(blank=True, max_length=255, unique=True)),

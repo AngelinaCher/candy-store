@@ -11,13 +11,13 @@ class PaymentMethod(models.TextChoices):
 
 class Cart(models.Model):
     cart_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    product_id = models.ForeignKey(Product, on_delete=models.CASCADE, null=False, blank=False,
-                                   verbose_name='Товар')
-    quantity = models.IntegerField(verbose_name='Количество')
-    discount = models.PositiveIntegerField(verbose_name='Скидка', null=True, default=None)
+    total_price = models.PositiveIntegerField(verbose_name='Общая сумма', default=0)
+    total_quantity = models.PositiveIntegerField(verbose_name='Всего товаров', default=0)
+    discount = models.PositiveIntegerField(verbose_name='Скидка', null=True, default=0)
     notes = models.TextField(blank=True, null=True, verbose_name='Комментарий пользователя')
-    created_up = models.DateTimeField(auto_now_add=True, verbose_name='Создано')
-    updated_up = models.DateTimeField(auto_now=True, verbose_name='Обновлено')
+    is_active = models.BooleanField(default=True, verbose_name='Активность')
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Создано')
+    updated_at = models.DateTimeField(auto_now=True, verbose_name='Обновлено')
 
     def __str__(self):
         return self.cart_id

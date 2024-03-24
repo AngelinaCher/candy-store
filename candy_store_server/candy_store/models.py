@@ -1,3 +1,4 @@
+import os
 import uuid
 from django.db import models
 from django.utils.text import slugify
@@ -52,21 +53,31 @@ class Category(models.Model):
         indexes = [models.Index(fields=['category_name', ]), ]
 
 
+def get_image_path(instance, filename):
+    category_name = instance.category_id.category_name if instance.category_id else "misc"
+    return os.path.join('product_images', category_name, filename)
+
+
 class Product(models.Model):
     """ Модель таблицы Продукты """
+
     product_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     product_name = models.CharField(max_length=255, null=False, verbose_name='Название товара')
     supplier_id = models.ForeignKey(to=Supplier, on_delete=models.PROTECT, null=False, blank=False,
                                     verbose_name='Поставщик')
     category_id = models.ForeignKey(to=Category, on_delete=models.PROTECT, null=False, blank=False,
                                     verbose_name='Категория')
-    unit = models.CharField(max_length=20, verbose_name='Единица измерения', null=False)
+    description = models.TextField(null=True, blank=True, verbose_name='Описание')
+    unit = models.CharField(max_length=20, verbose_name='Единица измерения', null=False, choices=(
+        ('pieces', 'шт'),
+        ('grams', 'гр'),
+    ), default='pieces')
     unit_price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Цена за единицу')
-    units_in_stock = models.PositiveIntegerField(verbose_name='Название товара')
-    image_path = models.ImageField(upload_to='product_images/', blank=True, null=True,
+    units_in_stock = models.PositiveIntegerField(verbose_name='Количество товара на складе')
+    image_path = models.ImageField(upload_to=get_image_path, blank=True, null=True,
                                    validators=[FileExtensionValidator(allowed_extensions=['jpg', 'png', 'jpeg'])],
                                    verbose_name='Изображение')
-    is_active = models.BooleanField(default=False, verbose_name='Название товара')
+    is_active = models.BooleanField(default=True, verbose_name='Наличие товара')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Дата изменения')
     slug = models.SlugField(unique=True, max_length=255, blank=True)
