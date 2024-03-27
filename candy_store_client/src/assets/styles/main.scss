@@ -187,4 +187,43 @@ body, html {
   color: #676767;
 }
 
+.main-page_new_products {
+  margin-top: 100px;
+}
+
+.main-page_new_products h1 {
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.main-page_new_products_block {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.main-page_new_product {
+  border-radius: 12px;
+  width: 315px;
+  height: 394px;
+}
+
+.main-page_new_product h2 {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 125%;
+}
+
+.main-page_new_product p {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.main-page_new_product button {
+  width: 100%;
+  height: 46px;
+}
+
 /***** End MainPage *****/
