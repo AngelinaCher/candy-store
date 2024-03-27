@@ -15,9 +15,9 @@
       </div>
 
       <div class="app-header_nav__search">
-        <b-form-input 
-          placeholder="Поиск по товарам" 
-          class="custom-input"
+        <b-form-input
+            placeholder="Поиск по товарам"
+            class="custom-input"
         ></b-form-input>
       </div>
 
