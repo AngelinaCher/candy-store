@@ -21,7 +21,7 @@
         ></b-form-input>
       </div>
 
-      <router-link class="app-header_nav__cart" to="/">
+      <router-link class="app-header_nav__cart" to="/cart">
         <div>
           <img src="../../assets/icons/cart.svg" alt="">
         </div>

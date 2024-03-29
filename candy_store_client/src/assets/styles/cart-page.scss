@@ -1,0 +1,133 @@
+@import "variables";
+
+.cart-page {
+
+}
+
+.cart-page_header {
+  margin-top: 40px;
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.cart-page_header h1 {
+  font-weight: 400;
+  font-size: 68px;
+  margin-right: 10px;
+}
+
+.cart-page_header p {
+  margin-top: 50px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #aeaeae;
+  margin-right: 67%;
+}
+
+.cart-page_header__btn {
+  margin-top: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  cursor: pointer;
+}
+
+.cart-page_header span:hover {
+  color: #aeaeae;
+  cursor: pointer;
+}
+
+.cart-page_header span:focus {
+  color: #aeaeae;
+  cursor: pointer;
+}
+
+.cart-page_content {
+  display: flex;
+}
+
+.cart-page_content__items {
+}
+
+.cart-page_content__items_item {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.cart-page_content__items_info h2 {
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.cart-page_content__items_item p {
+  margin-top: 50px;
+  font-weight: 400;
+  font-size: 23px;
+}
+
+.cart-page_content__items_amount {
+  display: flex;
+  margin-top: 80px;
+  margin-left: 600px;
+}
+
+.cart-page_content__items_amount__sign {
+  text-align: center;
+  background: #f0f0f0;
+  border-radius: 6px;
+  padding-top: 5px;
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.cart-page_content__items_amount__sign:hover {
+  background: $color-yellow;
+}
+
+.cart-page_content__items_amount__sign:focus {
+  background: $color-yellow;
+}
+
+.cart-page_content__items_amount__amount {
+  padding-top: 7px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 111%;
+}
+
+.cart-page_content__result {
+  margin-left: 50px;
+  border-radius: 10px;
+  width: 315px;
+  height: 223px;
+  background: #f6f6f6;
+  padding: 20px;
+}
+
+.cart-page_header__all, .cart-page_header__discount {
+  display: flex;
+  margin-bottom: 17px;
+}
+
+.cart-page_header__all_count {
+  width: 100px;
+}
+
+.cart-page_header__all_price {
+  width: 95px;
+  margin-left: 85px;
+}
+
+.cart-page_header__discount_btn {
+  width: 100%;
+  padding: 10px;
+}
+
+.result {
+  font-weight: 500;
+  font-size: 19px;
+}
