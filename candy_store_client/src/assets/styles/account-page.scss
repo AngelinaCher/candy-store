@@ -1,9 +1,7 @@
 @import "variables";
 
 .account-page {
-  margin-top: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
+
 }
 
 .account-page_tabs .nav-link {
@@ -70,4 +68,41 @@
 .account-page_exit p:focus {
   font-size: 16px;
   color: $color-yellow;
+}
+
+.account-page_account__data{
+  margin-left: 50px;
+}
+
+.account-page_account__data_el {
+  display: flex;
+  width: 315px;
+  height: 63px;
+}
+
+.account-page_account__data_el div {
+  margin-left: 20px;
+}
+
+.account-page_account__data_el input {
+  border-radius: 10px;
+  width: 315px;
+  height: 44px;
+  background: $color-white;
+}
+
+.account-page_account__data_el label {
+  font-weight: 400;
+  font-size: 12px;
+  color: #979797;
+}
+
+.account-page_account__btn {
+  margin-left: 70px;
+  margin-top: 70px;
+}
+
+.account-page_account__btn button {
+width: 236px;
+height: 48px;
 }

@@ -1,40 +1,61 @@
 <template>
   <div class="account-page">
+
     <div class="cart-page_header">
       <h1>Личный кабинет</h1>
     </div>
-
 
     <b-tabs pills card vertical class="account-page_tabs">
 
       <b-tab active class="account-page_tabs__tab">
         <template #title>
         <span class="d-flex align-items-center">
-          <img :src="require('../assets/icons/order_ap.svg')" alt="Мои заказы" class="tab-icon mr-2">
+          <img
+              :src="require('../assets/icons/order_ap.svg')"
+              alt="Мои заказы"
+              class="tab-icon mr-2"
+          >
           <span>Мои заказы</span>
         </span>
         </template>
-        <b-card-text>Заказы</b-card-text>
+        <b-card-text>
+          <Orders/>
+        </b-card-text>
       </b-tab>
 
       <b-tab class="account-page_tabs__tab">
         <template #title>
           <span class="d-flex align-items-center">
-            <img :src="require('../assets/icons/account_ap.svg')" alt="Учетная запись" class="tab-icon mr-2">
+            <img
+                :src="require('../assets/icons/account_ap.svg')"
+                alt="Учетная запись"
+                class="tab-icon mr-2"
+            >
             <span>Учетная запись</span>
           </span>
         </template>
-        <b-card-text>Данные учетной записи</b-card-text>
+        <b-card-text>
+          <Account
+              :userData="userData"
+              @changePassword="changePassword"
+          />
+        </b-card-text>
       </b-tab>
 
       <b-tab class="account-page_tabs__tab">
         <template #title>
-          <span class="d-flex align-items-center">
-            <img :src="require('../assets/icons/cart_ap.svg')" alt="Корзина" class="tab-icon mr-2">
+          <router-link
+              to="/cart" class="d-flex align-items-center"
+              style="text-decoration: none; color: #000000;"
+          >
+            <img
+                :src="require('../assets/icons/cart_ap.svg')"
+                alt="Корзина"
+                class="tab-icon mr-2"
+            >
             <span>Корзина</span>
-          </span>
+          </router-link>
         </template>
-        <b-card-text>Содержимое корзины</b-card-text>
       </b-tab>
 
     </b-tabs>
@@ -48,11 +69,30 @@
 </template>
 
 <script>
+import Orders from "../components/account-page/Orders.vue";
+import Account from "../components/account-page/Account.vue";
+
 export default {
-  name: "AccountPage"
+  name: "AccountPage",
+  components: {
+    Orders,
+    Account,
+  },
+  data() {
+    return {
+      userData: {
+        "name": "Иван",
+        "second_name": "Иванов",
+        "email": "ivanov@mail.ru",
+        "password": "test",
+      },
+      orderData: {},
+    }
+  },
+  methods: {
+    changePassword(password) {
+      console.log(password);
+    }
+  }
 }
 </script>
-
-<style scoped>
-
-</style>
