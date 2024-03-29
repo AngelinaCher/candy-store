@@ -1,0 +1,73 @@
+@import "variables";
+
+.account-page {
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.account-page_tabs .nav-link {
+  background: $color-grey;
+}
+
+.account-page_tabs .nav-link,
+.account-page_tabs .nav-link.active {
+  color: $color-black; /* Цвет текста заголовков табов */
+  margin-bottom: 10px;
+  border-radius: 10px;
+  width: 300px;
+  height: 60px;
+  padding-top: 17px;
+}
+
+.account-page_tabs {
+  .nav-link.active {
+    color: $color-black; // Применяем переменную к активному табу
+    background: $color-yellow;
+  }
+}
+
+.account-page_tabs__tab {
+  margin-bottom: 10px;
+}
+
+.account-page_tabs__tab:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.tab-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.account-page_exit {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  cursor: pointer;
+}
+
+.account-page_exit img {
+  margin-right: 15px;
+}
+
+.account-page_exit p {
+  padding-top: 16px;
+  font-size: 15px;
+}
+
+.account-page_exit p:hover {
+  font-size: 16px;
+  color: $color-yellow;
+}
+
+.account-page_exit p:focus {
+  font-size: 16px;
+  color: $color-yellow;
+}

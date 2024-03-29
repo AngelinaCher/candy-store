@@ -30,7 +30,7 @@
         </div>
       </router-link>
 
-      <router-link class="app-header_nav__account" to="/">
+      <router-link class="app-header_nav__account" to="/account">
         <div class="">
           <img src="../../assets/icons/account.svg" alt="">
         </div>
