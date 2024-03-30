@@ -8,7 +8,12 @@ SECRET_KEY = secret_key
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+if DEBUG:
+    CORS_ORIGIN_WHITELIST = (
+        'http://localhost:8080',
+    )
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -18,7 +23,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    
+    'corsheaders',
     'candy_store.apps.CandyStoreConfig',
     'users.apps.UsersConfig',
     'cart.apps.CartConfig',
@@ -34,6 +39,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'candy_store_server.urls'
