@@ -2,6 +2,7 @@
 @import "variables";
 @import "cart-page";
 @import "account-page";
+@import "login-page";
 
 body, html {
   font-family: "Onest-Regular", sans-serif;
@@ -9,7 +10,8 @@ body, html {
 }
 
 .main-page, .app-header, .cart-page,
-.account-page, .order-page, .catalog-page {
+.account-page, .order-page, .catalog-page,
+.login-page, .registration-page {
   padding-top: 50px;
   padding-left: 50px;
   padding-right: 50px;
