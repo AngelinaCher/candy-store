@@ -70,7 +70,7 @@
   color: $color-yellow;
 }
 
-.account-page_account__data{
+.account-page_account__data {
   margin-left: 50px;
 }
 
@@ -103,6 +103,51 @@
 }
 
 .account-page_account__btn button {
-width: 236px;
-height: 48px;
+  width: 236px;
+  height: 48px;
 }
+
+.account-page_orders {
+  margin-left: 70px;
+  display: flex;
+}
+
+.account-page_order {
+  color: $color-black;
+  text-decoration: none;
+  margin-right: 20px;
+  border-radius: 10px;
+  width: 482px;
+  height: 144px;
+  background: #f6f6f6;
+  padding: 20px;
+}
+
+.account-page_order:hover {
+  width: 484px;
+  height: 146px;
+  cursor: pointer;
+}
+
+.account-page_order:focus {
+  width: 484px;
+  height: 146px;
+  cursor: pointer;
+}
+
+.account-page_order h1 {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.account-page_order p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #636363;
+}
+
+.account-page_order span {
+  font-weight: 500;
+  font-size: 23px;
+}
+

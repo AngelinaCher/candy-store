@@ -19,7 +19,9 @@
         </span>
         </template>
         <b-card-text>
-          <Orders/>
+          <Orders
+            :orders="orderData"
+          />
         </b-card-text>
       </b-tab>
 
@@ -86,7 +88,18 @@ export default {
         "email": "ivanov@mail.ru",
         "password": "test",
       },
-      orderData: {},
+      orderData: [
+        {
+          "date": "12.01.2024",
+          "number_order": "445567-879234",
+          "amount": "12 000",
+        },
+        {
+          "date": "01.02.24",
+          "number_order": "445567-879233",
+          "amount": "23 000",
+        }
+      ],
     }
   },
   methods: {
