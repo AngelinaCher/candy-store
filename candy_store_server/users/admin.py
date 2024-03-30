@@ -1,6 +1,7 @@
 from django.contrib import admin
-from users.models import CustomUser
+
 from orders.admin import OrderAdmin
+from users.models import CustomUser
 
 
 @admin.register(CustomUser)

@@ -1,4 +1,5 @@
 from django.urls import path
+
 from candy_store import views
 
 urlpatterns = [

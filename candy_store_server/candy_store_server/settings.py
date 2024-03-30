@@ -1,6 +1,8 @@
 import os
 from pathlib import Path
-from config import secret_key, db_host, db_name, db_port, db_user, db_password, redis_url
+
+from config import (db_host, db_name, db_password, db_port, db_user, redis_url,
+                    secret_key)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 

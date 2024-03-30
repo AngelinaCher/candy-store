@@ -1,7 +1,9 @@
 import uuid
+
 from django.db import models
-from users.models import CustomUser
+
 from candy_store.models import Product
+from users.models import CustomUser
 
 
 class PaymentMethod(models.TextChoices):

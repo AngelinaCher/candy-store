@@ -1,4 +1,5 @@
 from django.contrib import admin
+
 from candy_store.models import Category, Product, Supplier
 
 

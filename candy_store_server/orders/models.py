@@ -1,7 +1,9 @@
 import uuid
+
 from django.db import models
-from users.models import CustomUser
+
 from cart.models import Cart
+from users.models import CustomUser
 
 
 class Order(models.Model):
