@@ -5,17 +5,9 @@
     </div>
 
     <div class="login-page_field">
-      <label for="range-2">Логин</label>
-      <b-form-input
-          placeholder="Введите логин"
-          class="custom-input login-page_field__input"
-      ></b-form-input>
-    </div>
-
-    <div class="login-page_field">
       <label for="range-2">E-mail</label>
       <b-form-input
-          placeholder="Введите логин"
+          placeholder="Введите e-mail"
           class="custom-input login-page_field__input"
       ></b-form-input>
     </div>

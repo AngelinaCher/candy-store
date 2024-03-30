@@ -5,10 +5,9 @@
     </div>
 
     <div class="login-page_field">
-      <label for="range-2">Логин</label>
+      <label for="range-2">E-mail</label>
       <b-form-input
-          v-model="userData.username"
-          placeholder="Введите логин"
+          placeholder="Введите e-mail"
           class="custom-input login-page_field__input"
       ></b-form-input>
     </div>
@@ -16,7 +15,6 @@
     <div class="login-page_field">
       <label for="range-2">Пароль</label>
       <b-form-input
-          v-model="userData.password"
           placeholder="Введите пароль"
           class="custom-input login-page_field__input"
           type="password"
@@ -45,11 +43,8 @@ export default {
   },
   data() {
     return {
-      userData: {
-        "username": "",
-        "password": "",
-      }
+
     }
-  }
+  },
 }
 </script>
