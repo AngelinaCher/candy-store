@@ -74,6 +74,9 @@
 <script>
 export default {
   name: "CardPage",
+  mounted() {
+    document.title = "Корзина | Карамелька "
+  },
   data() {
     return {
       testData: [

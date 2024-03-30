@@ -11,5 +11,8 @@
 export default {
   name: "CatalogPage",
   props: ["productName"],
+  mounted() {
+    document.title = "Каталог | Карамелька "
+  },
 }
 </script>
