@@ -25,6 +25,12 @@ const routes = [
         component: () => import("../views/OrderPage.vue"),
         props: true,
     },
+    {
+        path: "/catalog/:productName",
+        name: "CatalogPage",
+        component: () => import("../views/CatalogPage.vue"),
+        props: true,
+    }
 ]
 
 const router = new VueRouter({

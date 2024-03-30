@@ -5,13 +5,15 @@
 
 body, html {
   font-family: "Onest-Regular", sans-serif;
+  background: $color-grey;
 }
 
 .main-page, .app-header, .cart-page,
-.account-page, .order-page {
-  margin-top: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
+.account-page, .order-page, .catalog-page {
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background: $color-white;
 }
 
 .custom-input {

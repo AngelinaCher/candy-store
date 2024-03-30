@@ -9,8 +9,20 @@
 
       <div class="app-header_nav__menu">
         <b-dropdown id="dropdown-left" text="Каталог" class="catalog-dropdown">
-          <b-dropdown-item href="#">Батончики</b-dropdown-item>
-          <b-dropdown-item href="#">Шоколад</b-dropdown-item>
+          <b-dropdown-item>
+            <router-link
+                :to="{ name: 'CatalogPage', params: { productName: 'Батончики' }}"
+                style="text-decoration: none; color: #000000;"
+            >Батончики
+            </router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link
+                :to="{ name: 'CatalogPage', params: { productName: 'Шоколад' }}"
+                style="text-decoration: none; color: #000000;"
+            >Шоколад
+            </router-link>
+          </b-dropdown-item>
         </b-dropdown>
       </div>
 

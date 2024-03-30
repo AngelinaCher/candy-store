@@ -8,7 +8,7 @@
       <br> Успейте насладиться вкусом по выгодной цене!
     </p>
 
-    <router-link to="/">
+    <router-link :to="{ name: 'CatalogPage', params: { productName: 'Шоколад' }}">
       <b-button
           class="main-page_banner__btn custom-button"
       >Перейти к покупкам
