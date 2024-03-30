@@ -1,7 +1,7 @@
 <template>
   <div class="order-page">
     <div class="cart-page_header">
-      <h1>Заказ № {{this.orderId}}</h1>
+      <h1>Заказ № {{ this.orderId }}</h1>
     </div>
   </div>
 </template>
@@ -10,6 +10,9 @@
 export default {
   name: "OrderPage",
   props: ["orderId"],
+  mounted() {
+    document.title = "Заказ | Карамелька "
+  },
   data() {
     return {
       order: {},

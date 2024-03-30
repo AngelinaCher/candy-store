@@ -1,9 +1,9 @@
 <template>
   <div class="main-page">
     <Banner/>
-    <Categories />
-    <NewProducts />
-    <RecommendedProducts />
+    <Categories/>
+    <NewProducts/>
+    <RecommendedProducts/>
   </div>
 </template>
 
@@ -21,6 +21,9 @@ export default {
     Categories,
     NewProducts,
     RecommendedProducts,
+  },
+  mounted() {
+    document.title = "Главная | Карамелька "
   },
 }
 </script>

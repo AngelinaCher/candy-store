@@ -80,6 +80,9 @@ export default {
     Orders,
     Account,
   },
+  mounted() {
+    document.title = "Аккаунт | Карамелька "
+  },
   data() {
     return {
       userData: {
