@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
+    'api.apps.ApiConfig',
 
 ]
 
@@ -66,7 +67,7 @@ WSGI_APPLICATION = 'candy_store_server.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': db_name,
         'USER': db_user,
         'PASSWORD': db_password,
