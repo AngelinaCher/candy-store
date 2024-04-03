@@ -1,8 +1,9 @@
-import os
 import uuid
 from django.db import models
 from django.utils.text import slugify
 from django.core.validators import FileExtensionValidator
+
+from candy_store.services.product_service import get_image_path
 
 
 class Supplier(models.Model):
@@ -51,11 +52,6 @@ class Category(models.Model):
         verbose_name_plural = "Категории"
         ordering = ['category_name', ]
         indexes = [models.Index(fields=['category_name', ]), ]
-
-
-def get_image_path(instance, filename):
-    category_name = instance.category_id.category_name if instance.category_id else "misc"
-    return os.path.join('product_images', category_name, filename)
 
 
 class Product(models.Model):
