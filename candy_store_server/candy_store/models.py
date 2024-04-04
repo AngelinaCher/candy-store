@@ -1,9 +1,10 @@
-import os
 import uuid
 
 from django.core.validators import FileExtensionValidator
 from django.db import models
 from django.utils.text import slugify
+
+from candy_store.services.product_service import get_image_path
 
 
 class Supplier(models.Model):
@@ -54,14 +55,8 @@ class Category(models.Model):
         indexes = [models.Index(fields=['category_name', ]), ]
 
 
-def get_image_path(instance, filename):
-    category_name = instance.category_id.category_name if instance.category_id else "misc"
-    return os.path.join('product_images', category_name, filename)
-
-
 class Product(models.Model):
     """ Модель таблицы Продукты """
-
     product_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     product_name = models.CharField(max_length=255, null=False, verbose_name='Название товара')
     supplier_id = models.ForeignKey(to=Supplier, on_delete=models.PROTECT, null=False, blank=False,
