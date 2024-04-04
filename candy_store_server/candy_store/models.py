@@ -56,7 +56,6 @@ class Category(models.Model):
 
 class Product(models.Model):
     """ Модель таблицы Продукты """
-
     product_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     product_name = models.CharField(max_length=255, null=False, verbose_name='Название товара')
     supplier_id = models.ForeignKey(to=Supplier, on_delete=models.PROTECT, null=False, blank=False,
