@@ -10,13 +10,15 @@ class CategorySerializer(serializers.ModelSerializer):
 
 
 class ProductSerializer(serializers.ModelSerializer):
-    category_name = serializers.SerializerMethodField()
+    category_name = serializers.SlugRelatedField(
+        read_only=True,
+        slug_field='category_name',
+        source='category_id'
+    )
     image_path = serializers.ImageField(max_length=None, use_url=True)
-
-    def get_category_name(self, obj):
-        return obj.category_id.category_name
 
     class Meta:
         model = Product
         fields = (
-            'product_id', 'product_name', 'category_name', 'description', 'unit', 'unit_price', 'image_path', 'slug',)
+            'product_id', 'product_name', 'category_name', 'description', 'unit', 'unit_price', 'image_path', 'slug',
+        )
