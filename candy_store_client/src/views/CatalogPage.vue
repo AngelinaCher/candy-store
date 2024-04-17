@@ -60,6 +60,11 @@ export default {
     this.getProductsByCategories(this.productName);
     this.getAllCategories();
   },
+  watch: {
+    productName(newVal, oldVal) {
+      this.getProductsByCategories(newVal);
+    }
+  },
   methods: {
     getDataProps(productNameProps) {
       return productNameProps.split("/");
