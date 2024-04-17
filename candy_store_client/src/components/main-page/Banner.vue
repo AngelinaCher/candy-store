@@ -8,7 +8,7 @@
       <br> Успейте насладиться вкусом по выгодной цене!
     </p>
 
-    <router-link :to="{ name: 'CatalogPage', params: { productName: 'Шоколад' }}">
+    <router-link :to="{ name: 'CatalogPage', params: { productName: '8/batonchiki' }}">
       <b-button
           class="main-page_banner__btn custom-button"
       >Перейти к покупкам
