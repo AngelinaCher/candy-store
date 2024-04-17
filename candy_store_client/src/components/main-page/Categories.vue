@@ -2,30 +2,39 @@
   <div class="main-page_categories">
     <router-link
         class="main-page_categories_category"
-        v-for="cat in testData"
-        :key="cat.id" to="/"
+        v-for="cat in categories"
+        :key="cat['category_id']"
+        :to="{ name: 'CatalogPage', params: { productName: `${cat['category_id']}/${cat['slug']}` }}"
     >
-      <h1>{{ cat["category"] }}</h1>
+      <h1>{{ cat["category_name"] }}</h1>
       <p>{{ cat["desc"] }}</p>
-      <!--      <img :src="require(`${cat.img}`)" alt="">-->
+<!--      <img :src="require(`../../assets/imgs/${cat['slug']}.png`)" :alt="cat['slug']">-->
     </router-link>
   </div>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "Categories",
   data() {
     return {
-      testData: [
-        {"id": 1, "category": "Батончики", "desc": "Питательные для активного образа жизни", "img": "",},
-        {"id": 2, "category": "Шоколад", "desc": "Нежные и ароматные, для сладкого утешения", "img": "",},
-        {"id": 3, "category": "Печенье", "desc": "Хрустящие и нежные для домашнего уюта", "img": "",},
-        {"id": 4, "category": "Мармелад", "desc": "Сладкие, сочные, для радости и удовольствия", "img": "",},
-        {"id": 5, "category": "Сладкие подарки", "desc": "Радостные комплекты, для особых моментов", "img": "",},
-        {"id": 6, "category": "Конфеты", "desc": "Роскошные, изысканные, для настоящих гурманов", "img": "",}
-      ]
+      categories: [],
     }
+  },
+  mounted() {
+    this.getAllCategories();
+  },
+  methods: {
+    async getAllCategories() {
+      await axios
+          .get("http://127.0.0.1:8000/api/v1/categories")
+          .then(response => {
+            this.categories = response.data;
+          })
+          .catch(err => console.log(err))
+    },
   }
 }
 </script>
