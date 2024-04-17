@@ -1,4 +1,4 @@
-@import "variables";
+@import "../variables";
 
 .catalog-page_content {
   display: flex;
@@ -11,7 +11,7 @@
   border-radius: 10px;
   background: #f6f6f6;
   margin-bottom: 10px;
-  margin-right: 40px;
+  margin-right: 80px;
 }
 
 .catalog-page_categories__category:hover {
