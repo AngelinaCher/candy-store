@@ -9,19 +9,11 @@
 
       <div class="app-header_nav__menu">
         <b-dropdown id="dropdown-left" text="Каталог" class="catalog-dropdown">
-          <b-dropdown-item>
+          <b-dropdown-item v-for="cat in categories" :key="cat['category_id']">
             <router-link
-                :to="{ name: 'CatalogPage', params: { productName: 'Батончики' }}"
+                :to="{ name: 'CatalogPage', params: { productName: `${cat['category_id']}/${cat['slug']}` }}"
                 style="text-decoration: none; color: #000000;"
-            >Батончики
-            </router-link>
-          </b-dropdown-item>
-          <b-dropdown-item>
-            <router-link
-                :to="{ name: 'CatalogPage', params: { productName: 'Шоколад' }}"
-                style="text-decoration: none; color: #000000;"
-            >Шоколад
-            </router-link>
+            >{{ cat["category_name"] }}</router-link>
           </b-dropdown-item>
         </b-dropdown>
       </div>
@@ -57,8 +49,30 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "AppHeader",
+  data() {
+    return {
+      categories: [],
+    }
+  },
+  mounted() {
+    this.getCategories();
+  },
+  methods: {
+    async getCategories() {
+      await axios
+          .get("http://127.0.0.1:8000/api/v1/categories")
+          .then(response => {
+            this.categories = response.data;
+          })
+          .catch(err => {
+            console.log(err);
+          })
+    }
+  },
 }
 </script>
 
