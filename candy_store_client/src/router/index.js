@@ -42,7 +42,7 @@ const routes = [
         component: () => import("../views/RegistrationPage.vue")
     },
     {
-        path: "product/:productSlug",
+        path: "/product/:productSlug",
         name: "ProductPage",
         component: () => import("../views/ProductPage.vue"),
         props: true,
