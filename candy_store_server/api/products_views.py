@@ -32,20 +32,28 @@ class ProductListView(ListAPIView):
     """
     serializer_class = ProductSerializer
 
-    def get(self, request, *args, **kwargs) -> Union[Response, list[Product]]:
+    def get_queryset(self):
         category_id = self.request.query_params.get('category_id')
 
         if category_id is not None:
             try:
                 category_id = int(category_id)
             except ValueError:
-                return Response({"error": "Невалидное значение category_id"}, status=HTTP_400_BAD_REQUEST)
+                raise ValueError("Невалидное значение category_id")
 
             queryset = Product.objects.filter(category_id=category_id)
             if not queryset.exists():
-                return Response({"error": f"Категории с {category_id} не существует"}, status=HTTP_400_BAD_REQUEST)
+                raise ValueError(f"Категории с {category_id} не существует")
         else:
             queryset = Product.objects.all()
+
+        return queryset
+
+    def list(self, request, *args, **kwargs):
+        try:
+            queryset = self.get_queryset()
+        except ValueError as e:
+            return Response({"error": str(e)}, status=HTTP_400_BAD_REQUEST)
 
         serializer = self.serializer_class(queryset, many=True)
         return Response(serializer.data, status=HTTP_200_OK)
