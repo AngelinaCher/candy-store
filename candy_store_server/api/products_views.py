@@ -1,8 +1,8 @@
-from typing import Union
+from django.db.models import Count, QuerySet
+from rest_framework.exceptions import ValidationError
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.response import Response
-from rest_framework.status import HTTP_400_BAD_REQUEST, HTTP_200_OK
-from django.db.models import Count
+from rest_framework.status import HTTP_200_OK, HTTP_400_BAD_REQUEST
 
 from candy_store.models import Category, Product
 from candy_store.serializers import CategorySerializer, ProductSerializer
@@ -16,7 +16,7 @@ class CategoryListView(ListAPIView):
     """
     serializer_class = CategorySerializer
 
-    def get_queryset(self) -> list[Category]:
+    def get_queryset(self) -> QuerySet:
         queryset = Category.objects.annotate(num_products=Count('product'))
         queryset = queryset.filter(num_products__gt=0)
 
@@ -32,30 +32,30 @@ class ProductListView(ListAPIView):
     """
     serializer_class = ProductSerializer
 
-    def get_queryset(self):
+    def get_queryset(self) -> QuerySet:
         category_id = self.request.query_params.get('category_id')
 
         if category_id is not None:
             try:
                 category_id = int(category_id)
             except ValueError:
-                raise ValueError("Невалидное значение category_id")
+                raise ValidationError("Невалидное значение category_id")
 
             queryset = Product.objects.filter(category_id=category_id)
             if not queryset.exists():
-                raise ValueError(f"Категории с {category_id} не существует")
+                raise ValidationError(f"Категории с {category_id} не существует")
         else:
             queryset = Product.objects.all()
 
         return queryset
 
-    def list(self, request, *args, **kwargs):
+    def list(self, request, *args, **kwargs) -> Response:
         try:
             queryset = self.get_queryset()
-        except ValueError as e:
-            return Response({"error": str(e)}, status=HTTP_400_BAD_REQUEST)
+        except ValidationError as e:
+            return Response({"error": e.args[0]}, status=HTTP_400_BAD_REQUEST)
 
-        serializer = self.serializer_class(queryset, many=True)
+        serializer = self.serializer_class(queryset, many=True, context={'request': request})
         return Response(serializer.data, status=HTTP_200_OK)
 
 
