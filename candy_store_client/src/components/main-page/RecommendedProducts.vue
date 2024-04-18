@@ -4,33 +4,45 @@
     <h1>Рекомендуем</h1>
 
     <div class="main-page_new_products_block">
-      <div
+      <router-link
           class="main-page_new_product"
-          v-for="product in testData"
+          v-for="product in recommendProducts"
           :key="product.id"
+          :to="{ name: 'ProductPage', params: { productSlug: `${product['slug']}` }}"
       >
-        <img :src="require(`../../assets/icons/${product.img}`)">
-        <h2> {{ product["name"] }} </h2>
-        <p>{{ product["cost"] }} ₽</p>
+        <img :src="product['image_path']" :alt="product['slug']">
+        <h2> {{ product["product_name"] }} </h2>
+        <p>{{ product["unit_price"] }} ₽</p>
         <b-button class="custom-button">В корзину</b-button>
-      </div>
-
+      </router-link>
     </div>
+
   </div>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
-  "name": "RecommendedProducts",
+  name: "RecommendedProducts",
   data() {
     return {
-      testData: [
-        {"id": 1, "name": "Белый шоколад Villars с ванилью", "cost": 1280, "img": "test_img.png"},
-        {"id": 2, "name": "Белый шоколад Villars с ванилью", "cost": 1280, "img": "test_img.png"},
-        {"id": 3, "name": "Белый шоколад Villars с ванилью", "cost": 1280, "img": "test_img.png"},
-        {"id": 4, "name": "Белый шоколад Villars с ванилью", "cost": 1280, "img": "test_img.png"},
-      ],
+      recommendProducts: [],
     }
-  }
+  },
+  mounted() {
+    this.getAllProducts();
+  },
+  methods: {
+    async getAllProducts() {
+      await axios
+          .get("http://127.0.0.1:8000/api/v1/products")
+          .then(response => {
+            this.recommendProducts = response.data.slice(5, 10);
+          })
+          .catch(err => console.log(err))
+    },
+  },
+
 }
 </script>

@@ -25,7 +25,7 @@
             v-for="product in products"
             :key="product['product_id']"
         >
-          <router-link to="/">
+          <router-link :to="{ name: 'ProductPage', params: { productSlug: `${product['slug']}` }}">
             <img
                 :src="product['image_path']"
                 :alt="product['product_name']"

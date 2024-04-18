@@ -5,6 +5,7 @@
 @import "pages/account-page";
 @import "pages/login-page";
 @import "pages/catalog-page";
+@import "pages/product-page";
 
 body, html {
   font-family: "Onest-Regular", sans-serif;
@@ -13,7 +14,7 @@ body, html {
 
 .main-page, .app-header, .cart-page,
 .account-page, .order-page, .catalog-page,
-.login-page, .registration-page {
+.login-page, .registration-page, .product-page {
   padding-top: 50px;
   padding-left: 50px;
   padding-right: 50px;

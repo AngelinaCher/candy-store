@@ -41,6 +41,12 @@ const routes = [
         name: "RegistrationPage",
         component: () => import("../views/RegistrationPage.vue")
     },
+    {
+        path: "/product/:productSlug",
+        name: "ProductPage",
+        component: () => import("../views/ProductPage.vue"),
+        props: true,
+    }
 ]
 
 const router = new VueRouter({

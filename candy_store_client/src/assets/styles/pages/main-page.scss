@@ -1,3 +1,5 @@
+@import "../variables";
+
 .main-page_banner {
   border-radius: 16px;
   width: 100%;
@@ -76,6 +78,11 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.main-page_new_products_block a {
+  text-decoration: none;
+  color: $color-black;
 }
 
 .main-page_new_product {
