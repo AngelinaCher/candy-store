@@ -1,7 +1,7 @@
 from typing import Union
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.response import Response
-from rest_framework.status import HTTP_400_BAD_REQUEST
+from rest_framework.status import HTTP_400_BAD_REQUEST, HTTP_200_OK
 from django.db.models import Count
 
 from candy_store.models import Category, Product
@@ -47,7 +47,8 @@ class ProductListView(ListAPIView):
         else:
             queryset = Product.objects.all()
 
-        return queryset
+        serializer = self.serializer_class(queryset, many=True)
+        return Response(serializer.data, status=HTTP_200_OK)
 
 
 class ProductDetailView(RetrieveAPIView):
@@ -55,4 +56,3 @@ class ProductDetailView(RetrieveAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     lookup_field = 'slug'
-
