@@ -55,7 +55,12 @@ export default {
       product: {},
     }
   },
-  mounted() {
+  watch: {
+    '$route'() {
+      this.getProduct();
+    }
+  },
+  created() {
     this.getProduct();
   },
   methods: {
@@ -66,7 +71,7 @@ export default {
             this.product = response.data;
           })
           .catch(err => console.log(err))
-    }
-  }
+    },
+  },
 }
 </script>
