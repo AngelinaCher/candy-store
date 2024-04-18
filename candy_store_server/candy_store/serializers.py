@@ -6,7 +6,7 @@ from candy_store.models import Category, Product
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = ('category_id', 'category_name', 'slug',)
+        fields = ('category_id', 'category_name', 'slug', 'description')
 
 
 class ProductSerializer(serializers.ModelSerializer):
