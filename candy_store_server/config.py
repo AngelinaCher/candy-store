@@ -12,5 +12,6 @@ db_user = os.getenv("DB_USER")
 db_password = os.getenv("DB_PASSWORD")
 
 secret_key = os.getenv("SECRET_KEY")
+signing_key = os.getenv("SIGNING_KEY_JWT")
 
 redis_url = os.getenv("REDIS_URL")
