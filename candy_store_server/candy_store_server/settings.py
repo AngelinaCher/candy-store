@@ -2,12 +2,11 @@ import os
 from datetime import timedelta
 from pathlib import Path
 
-from config import (db_host, db_name, db_password, db_port, db_user, redis_url,
-                    secret_key, signing_key)
+import config
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = secret_key
+SECRET_KEY = config.SECRET_KEY
 
 DEBUG = True
 
@@ -75,7 +74,7 @@ SIMPLE_JWT = {
     'ALGORITHM': 'HS256',
     'USER_ID_FIELD': 'email',
     'USER_ID_CLAIM': 'email',
-    'SIGNING_KEY': signing_key,
+    'SIGNING_KEY': config.SIGNING_KEY,
 }
 
 ROOT_URLCONF = 'candy_store_server.urls'
@@ -101,18 +100,18 @@ WSGI_APPLICATION = 'candy_store_server.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': db_name,
-        'USER': db_user,
-        'PASSWORD': db_password,
-        'HOST': db_host,
-        'PORT': db_port,
+        'NAME': config.DB_NAME,
+        'USER': config.DB_USER,
+        'PASSWORD': config.DB_PASSWORD,
+        'HOST': config.DB_HOST,
+        'PORT': config.DB_PORT,
     },
 }
 
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.redis.RedisCache',
-        'LOCATION': redis_url,
+        'LOCATION': config.REDIS_URL,
     }
 }
 
@@ -151,3 +150,11 @@ AUTH_USER_MODEL = 'users.CustomUser'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+EMAIL_HOST = config.EMAIL_HOST
+EMAIL_PORT = config.EMAIL_PORT
+EMAIL_HOST_USER = config.EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = config.EMAIL_HOST_PASSWORD
+EMAIL_USE_TLS = config.EMAIL_USE_TLS
+EMAIL_USE_SSL = config.EMAIL_USE_SSL
+DEFAULT_FROM_EMAIL = config.DEFAULT_FROM_EMAIL
