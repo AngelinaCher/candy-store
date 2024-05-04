@@ -1,8 +1,9 @@
-from django.urls import include, path, re_path
-from djoser import views as djoser_views
+from django.urls import include, path
+
+from authentication import views
 
 urlpatterns = [
     path('v1/auth/', include('djoser.urls')),
-    re_path(r'^auth/', include('djoser.urls.jwt')),
-    re_path(r'^auth/', include('djoser.urls.authtoken')),
+    path('v1/auth/', include('djoser.urls.jwt')),
+    path('auth/activate/<uid>/<token>', views.ActivateUser.as_view({'get': 'activation'}), name='activation'),
 ]
