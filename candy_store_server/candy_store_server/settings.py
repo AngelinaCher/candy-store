@@ -8,6 +8,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config.SECRET_KEY
 
+DOMAIN = 'localhost:8080'
+SITE_NAME = 'Karamelka'
+
 DEBUG = True
 
 if DEBUG:
@@ -60,6 +63,7 @@ REST_FRAMEWORK = {
 }
 
 DJOSER = {
+    'HIDE_USERS': True,
     'LOGIN_FIELD': 'email',
     'PASSWORD_RESET_CONFIRM_URL': '/password/reset/confirm/{uid}/{token}',
     'ACTIVATION_URL': 'api/auth/activate/{uid}/{token}',
@@ -67,21 +71,26 @@ DJOSER = {
     'EMAIL': {
         'activation': 'authentication.views.ActivateEmail',
     },
-    'PASSWORD_CHANGED_EMAIL_CONFIRMATION': False,
+    'PASSWORD_CHANGED_EMAIL_CONFIRMATION': True,
     'LOGOUT_ON_PASSWORD_CHANGE': True,
     'PASSWORD_RESET_SHOW_EMAIL_NOT_FOUND': True,
-    'SERIALIZERS': {},
+    'SERIALIZERS': {
+        'user': 'users.serializers.CustomUserSerializer',
+        'current_user': 'users.serializers.CustomUserSerializer',
+    },
 }
 
 SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=5),
     'ALGORITHM': 'HS256',
-    'USER_ID_FIELD': 'email',
-    'USER_ID_CLAIM': 'email',
+    'USER_ID_FIELD': 'user_id',
+    'USER_ID_CLAIM': 'user_id',
     'SIGNING_KEY': config.SIGNING_KEY,
 }
+
+LOGIN_URL = 'api/v1/auth/login/'
 
 ROOT_URLCONF = 'candy_store_server.urls'
 
