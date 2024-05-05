@@ -1,4 +1,5 @@
 from django.urls import path
+
 from api import products_views, users_views
 
 urlpatterns = [

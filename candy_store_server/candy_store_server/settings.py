@@ -76,9 +76,9 @@ DJOSER = {
     'SEND_ACTIVATION_EMAIL': True,
     'EMAIL': {
         'activation': 'authentication.views.ActivateEmail',
+        'password_changed_confirmation': 'authentication.views.SetPasswordEmail'
     },
     'PASSWORD_CHANGED_EMAIL_CONFIRMATION': True,
-    'LOGOUT_ON_PASSWORD_CHANGE': True,
     'PASSWORD_RESET_SHOW_EMAIL_NOT_FOUND': True,
     'SERIALIZERS': {
         'user': 'users.serializers.CustomUserSerializer',

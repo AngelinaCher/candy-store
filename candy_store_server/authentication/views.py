@@ -2,10 +2,21 @@ from django.contrib.auth.tokens import default_token_generator
 from django.shortcuts import render
 from djoser import email, utils
 from djoser.conf import settings
-
-from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView, TokenVerifyView
-
 from djoser.views import UserViewSet
+from rest_framework.decorators import action
+from rest_framework_simplejwt.views import (TokenObtainPairView,
+                                            TokenRefreshView, TokenVerifyView)
+
+
+class SetPasswordView(UserViewSet):
+
+    @action(["post"], detail=False)
+    def set_password(self, request, *args, **kwargs):
+        """
+        API для смены пароля. Принимает новый и текущий пароль.
+        """
+
+        return super().set_password(request, *args, **kwargs)
 
 
 class RegisterUserView(UserViewSet):
@@ -34,6 +45,13 @@ class VerifyTokenView(TokenVerifyView):
     """
     Принимает токен и указывает, является ли он действительным.
     """
+
+
+class SetPasswordEmail(email.ActivationEmail):
+    """
+    Формирует письмо об смене пароля
+    """
+    template_name = 'authentication/set_password.html'
 
 
 class ActivateEmail(email.ActivationEmail):

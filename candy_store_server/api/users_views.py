@@ -3,19 +3,15 @@ from rest_framework.decorators import action
 
 
 class ProfileView(UserViewSet):
+    """
+    Возвращает или обновляет данные о пользователе
+    """
 
-    @action(["get"], detail=False)
+    @action(["get", "patch",], detail=False)
     def me(self, request, *args, **kwargs):
-        """
-        Возвращает данные пользователя
-        """
         self.get_object = self.get_instance
-        return self.retrieve(request, *args, **kwargs)
+        if request.method == "GET":
+            return self.retrieve(request, *args, **kwargs)
+        elif request.method == "PATCH":
+            return self.partial_update(request, *args, **kwargs)
 
-    @action(["patch"], detail=False)
-    def me(self, request, *args, **kwargs):
-        """
-        Принимает поля для обновления и изменяет данные пользователя, идентификаторов выступает email
-        """
-        self.get_object = self.get_instance
-        return self.partial_update(request, *args, **kwargs)
