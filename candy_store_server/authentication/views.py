@@ -1,8 +1,8 @@
 from django.contrib.auth.tokens import default_token_generator
+from django.shortcuts import render
 from djoser import email, utils
 from djoser.conf import settings
 from djoser.views import UserViewSet
-from django.shortcuts import render
 
 
 class ActivateEmail(email.ActivationEmail):
