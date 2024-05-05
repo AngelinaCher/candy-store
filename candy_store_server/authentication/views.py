@@ -2,14 +2,37 @@ from django.contrib.auth.tokens import default_token_generator
 from django.shortcuts import render
 from djoser import email, utils
 from djoser.conf import settings
+
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView, TokenVerifyView
+
 from djoser.views import UserViewSet
-from rest_framework_simplejwt.views import TokenObtainPairView
+
+
+class RegisterUserView(UserViewSet):
+    """
+    Получает email и password, затем оправляет письмо на почту для активации аккаунта
+    """
+
+    def create(self, request, *args, **kwargs):
+        return super().create(request, *args, **kwargs)
 
 
 class LoginView(TokenObtainPairView):
     """
     Принимает email и password активированного пользователя и возвращает access и refresh
     jwt-токены.
+    """
+
+
+class RefreshTokenView(TokenRefreshView):
+    """
+    Принимает refresh-token и обновляет access-токен
+    """
+
+
+class VerifyTokenView(TokenVerifyView):
+    """
+    Принимает токен и указывает, является ли он действительным.
     """
 
 
