@@ -16,9 +16,6 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # Секретный ключ для jwt-токена
 SIGNING_KEY = os.getenv("SIGNING_KEY_JWT")
 
-# Настройки для Redis
-REDIS_URL = os.getenv("REDIS_URL")
-
 # Настройка почты
 EMAIL_HOST = os.getenv('EMAIL_HOST')
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
