@@ -28,6 +28,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
 ]
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -140,8 +141,6 @@ CACHES = {
 }
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True
-SESSION_SAVE_EVERY_REQUEST = True
 
 AUTH_PASSWORD_VALIDATORS = [
     {
