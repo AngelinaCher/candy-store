@@ -23,6 +23,13 @@ class UserOrderListAPIView(APIView):
         'BC': 'Банковская карта',
     }
 
+    STATUS_MAPPING = {
+        'new': 'Новый',
+        'in_progress': 'В обработке',
+        'confirmed': 'Подтверждён',
+        'completed': 'Выполнен'
+    }
+
     def get(self, request):
         user = request.user
 
@@ -39,12 +46,14 @@ class UserOrderListAPIView(APIView):
             total_quantity = cart_serializer.data.get('total_quantity', 0)
 
             payment_method_display = self.PAYMENT_METHOD_MAPPING.get(order.payment_method)
+            status_display = self.STATUS_MAPPING.get(order.status)
 
             order_info = {
                 'order_id': order.order_id,
                 'customer_id': order.customer_id.user_id,
                 'required_date': order.required_date,
                 'payment_method': payment_method_display,
+                'status': status_display,
                 'cart_items': cart_items,
                 'total_price': total_price,
                 'total_quantity': total_quantity
@@ -68,6 +77,13 @@ class OrderDetailAPIView(APIView):
         'BC': 'Банковская карта',
     }
 
+    STATUS_MAPPING = {
+        'new': 'Новый',
+        'in_progress': 'В обработке',
+        'confirmed': 'Подтверждён',
+        'completed': 'Выполнен'
+    }
+
     def get(self, request):
         order_id = request.GET.get('order_id')
         if not order_id:
@@ -86,12 +102,14 @@ class OrderDetailAPIView(APIView):
         total_quantity = cart_serializer.data.get('total_quantity', 0)
 
         payment_method_display = self.PAYMENT_METHOD_MAPPING.get(order.payment_method)
+        status_display = self.STATUS_MAPPING.get(order.status)
 
         order_info = {
             'order_id': order.order_id,
             'customer_id': order.customer_id.user_id,
             'required_date': order.required_date,
             'payment_method': payment_method_display,
+            'status': self.STATUS_MAPPING[order.status],
             'cart_items': cart_items,
             'total_price': total_price,
             'total_quantity': total_quantity

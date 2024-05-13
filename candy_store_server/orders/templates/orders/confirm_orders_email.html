@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подтверждение заказа</title>
+</head>
+<body>
+    {% if recipient_name %}
+    <p>{{ recipient_name }},</p>
+    {% else %}
+    <p>Уважаемый покупатель,</p>
+    {% endif %}
+
+    <p>Ваш заказ № <b>{{ order_id }}</b> подтвержден и будет ждать вас по адресу: г. Краснодар, ул. Рашпилевская, 137.
+        <br> Дата получения: <b>{{ required_date }} г.</b></p>
+    <p>Способ оплаты заказа: {{ payment_method }}.</p>
+    <p>Спасибо, что пользуетесь нашим сайтом!</p>
+    <p>С уважением интернет-магазин "Карамелька"</p>
+</body>
+</html>
