@@ -1,8 +1,8 @@
 from django.core.exceptions import ObjectDoesNotExist
+from drf_spectacular.utils import OpenApiExample, extend_schema
 from rest_framework import permissions
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from drf_spectacular.utils import extend_schema, OpenApiExample
 
 from candy_store.models import Product
 from cart.models import Cart, CartItem
@@ -22,18 +22,11 @@ class CartAPIView(APIView):
             return Response({"message": "Корзина пуста"}, status=200)
 
 
-@extend_schema(
-    request=CartSerializer,
-    examples=[
-        OpenApiExample(
-            name='Request',
-            value={
-                'product_id': '0b75b3d3-61ac-4587-a253-02bdfc2b13c5',
-                'product_quantity': "5"
-            }
-        ),
-    ]
-)
+@extend_schema(request=CartSerializer, examples=[
+    OpenApiExample(name='Request', value={
+        'product_id': '0b75b3d3-61ac-4587-a253-02bdfc2b13c5',
+        'product_quantity': "5"
+    }), ])
 class AddToCartAPIView(APIView):
     """ Создание корзины и добавление в неё товаров """
     permission_classes = [permissions.IsAuthenticated]
@@ -47,7 +40,10 @@ class AddToCartAPIView(APIView):
         except Product.DoesNotExist:
             return Response({"message": "Указанный продукт не существует"}, status=400)
 
-        cart, created = Cart.objects.get_or_create(user_id=request.user)
+        try:
+            cart = Cart.objects.get(user_id=request.user, is_active=True)
+        except Cart.DoesNotExist:
+            cart = Cart.objects.create(user_id=request.user)
 
         cart_item, created = CartItem.objects.get_or_create(
             cart_id=cart,
@@ -69,18 +65,11 @@ class AddToCartAPIView(APIView):
         return Response(cart_serializer.data)
 
 
-@extend_schema(
-    request=CartSerializer,
-    examples=[
-        OpenApiExample(
-            name='Request',
-            value={
-                'product_id': '0b75b3d3-61ac-4587-a253-02bdfc2b13c5',
-                'product_quantity': "1"
-            }
-        ),
-    ]
-)
+@extend_schema(request=CartSerializer, examples=[
+    OpenApiExample(name='Request', value={
+        'product_id': '0b75b3d3-61ac-4587-a253-02bdfc2b13c5',
+        'product_quantity': "1"
+    }), ])
 class RemoveFromCartAPIView(APIView):
     """ Уменьшение количества товаров в корзине и удаление корзины, если в ней не осталось товаров """
     permission_classes = [permissions.IsAuthenticated]
@@ -135,4 +124,4 @@ class ClearCartAPIView(APIView):
         except Cart.DoesNotExist:
             return Response({"message": "Корзина не найдена"}, status=404)
         except Exception as e:
-            return Response({"message": "Произошла ошибка при удалении корзины"}, status=500)
+            return Response({"message": f"Произошла ошибка при удалении корзины {e}"}, status=500)
