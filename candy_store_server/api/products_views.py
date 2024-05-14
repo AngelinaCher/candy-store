@@ -1,3 +1,5 @@
+import random
+
 from django.db.models import Count, QuerySet
 from rest_framework.exceptions import ValidationError
 from rest_framework.generics import ListAPIView, RetrieveAPIView
@@ -8,7 +10,7 @@ from candy_store.models import Category, Product
 from candy_store.serializers import CategorySerializer, ProductSerializer
 
 
-class CategoryListView(ListAPIView):
+class CategoryAPIView(ListAPIView):
     """
     Список всех категорий
 
@@ -23,7 +25,7 @@ class CategoryListView(ListAPIView):
         return queryset
 
 
-class ProductListView(ListAPIView):
+class ProductAPIView(ListAPIView):
     """
     Список товаров по категории
 
@@ -64,3 +66,20 @@ class ProductDetailView(RetrieveAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     lookup_field = 'slug'
+
+
+class NewProductsAPIView(ListAPIView):
+    """ Вывод новинок """
+    queryset = Product.objects.order_by('-created_at')[:4]
+    serializer_class = ProductSerializer
+
+
+class RecommendedProductsAPIView(ListAPIView):
+    """ Рекомендуемые товары """
+
+    serializer_class = ProductSerializer
+
+    def get_queryset(self):
+        all_products = Product.objects.all()
+        random_products = random.sample(list(all_products), k=4)
+        return random_products

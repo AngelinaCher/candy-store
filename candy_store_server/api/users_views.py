@@ -2,7 +2,7 @@ from djoser.views import UserViewSet
 from rest_framework.decorators import action
 
 
-class ProfileView(UserViewSet):
+class ProfileViewSet(UserViewSet):
     """
     Возвращает или обновляет данные о пользователе
     """
