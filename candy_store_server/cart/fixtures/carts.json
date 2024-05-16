@@ -1,0 +1,126 @@
+[
+{
+  "model": "cart.cart",
+  "pk": "1f24a35e-65b5-4efb-9051-ae356416d060",
+  "fields": {
+    "total_price": 670,
+    "total_quantity": 3,
+    "discount": 0,
+    "is_active": false,
+    "created_at": "2024-05-16T15:49:53.378Z",
+    "updated_at": "2024-05-16T15:52:56.896Z",
+    "user_id": "6de2765b-3969-46a7-a9a4-d58f876fdacc"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": "68bf2453-8c60-42f6-b549-985d5d1b25df",
+  "fields": {
+    "total_price": 250,
+    "total_quantity": 1,
+    "discount": 0,
+    "is_active": false,
+    "created_at": "2024-05-13T18:22:28.812Z",
+    "updated_at": "2024-05-13T20:07:11.740Z",
+    "user_id": "6de2765b-3969-46a7-a9a4-d58f876fdacc"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": "6d63745b-b003-4fc2-ac97-406e7b43584e",
+  "fields": {
+    "total_price": 364,
+    "total_quantity": 2,
+    "discount": 0,
+    "is_active": false,
+    "created_at": "2024-05-13T20:41:09.543Z",
+    "updated_at": "2024-05-13T20:43:41.531Z",
+    "user_id": "6de2765b-3969-46a7-a9a4-d58f876fdacc"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": "e93d8015-7c6f-4c13-b296-10e2416f3951",
+  "fields": {
+    "total_price": 250,
+    "total_quantity": 2,
+    "discount": 0,
+    "is_active": true,
+    "created_at": "2024-05-16T15:59:48.467Z",
+    "updated_at": "2024-05-16T16:01:01.925Z",
+    "user_id": "f388cc48-d5e2-4e70-8072-16fb76de0e2a"
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 19,
+  "fields": {
+    "cart_id": "68bf2453-8c60-42f6-b549-985d5d1b25df",
+    "product_id": "2163d6ed-d945-402e-abb0-f262cac0442a",
+    "product_quantity": 5
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 20,
+  "fields": {
+    "cart_id": "6d63745b-b003-4fc2-ac97-406e7b43584e",
+    "product_id": "30817b9f-28e1-42bd-9c8c-a5c51eba8581",
+    "product_quantity": 10
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 21,
+  "fields": {
+    "cart_id": "6d63745b-b003-4fc2-ac97-406e7b43584e",
+    "product_id": "4764d8d1-aec1-41a0-a5b5-05a2e43cd652",
+    "product_quantity": 2
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 22,
+  "fields": {
+    "cart_id": "1f24a35e-65b5-4efb-9051-ae356416d060",
+    "product_id": "e4767bfa-ac35-475b-bcfe-8a550bb02f40",
+    "product_quantity": 200
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 23,
+  "fields": {
+    "cart_id": "1f24a35e-65b5-4efb-9051-ae356416d060",
+    "product_id": "526e3dd3-23b8-48ad-a495-270bb76b27ee",
+    "product_quantity": 10
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 24,
+  "fields": {
+    "cart_id": "1f24a35e-65b5-4efb-9051-ae356416d060",
+    "product_id": "25d63ed5-adb5-432e-adec-582ef239f0d0",
+    "product_quantity": 2
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 25,
+  "fields": {
+    "cart_id": "e93d8015-7c6f-4c13-b296-10e2416f3951",
+    "product_id": "7df32d13-637a-4d8e-be6e-a3b48ea84b46",
+    "product_quantity": 5
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 26,
+  "fields": {
+    "cart_id": "e93d8015-7c6f-4c13-b296-10e2416f3951",
+    "product_id": "1e802ba1-6fd6-457f-99c0-0463d7c10c06",
+    "product_quantity": 1
+  }
+}
+]
