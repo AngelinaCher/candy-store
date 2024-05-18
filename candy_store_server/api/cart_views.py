@@ -13,7 +13,12 @@ class CartAPIView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request):
-        """ Корзина покупателя """
+        """
+        Корзина покупателя
+
+        Сумма товаров считается в зависимости от типа unit.
+        Если тип unit = гр, значит сумма рассчитывается на 100гр
+        """
         try:
             cart = Cart.objects.get(user_id=request.user, is_active=True)
             serializer = CartSerializer(cart, context={'request': request})
@@ -32,6 +37,10 @@ class AddToCartAPIView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def post(self, request):
+        """
+        Сумма товаров считается в зависимости от типа unit.
+        Если тип unit = гр, значит сумма рассчитывается на 100гр
+        """
         product_id = request.data.get('product_id')
         product_quantity = request.data.get('product_quantity')
 
@@ -54,7 +63,7 @@ class AddToCartAPIView(APIView):
             cart_item.product_quantity += int(product_quantity)
             cart_item.save()
 
-        cart_serializer = CartSerializer(cart)
+        cart_serializer = CartSerializer(cart, context={'request': request})
         total_price = cart_serializer.get_total_price(cart)
         total_quantity = cart_serializer.get_total_quantity(cart)
 
@@ -99,7 +108,7 @@ class RemoveFromCartAPIView(APIView):
         else:
             cart_item.save()
 
-        cart_serializer = CartSerializer(cart)
+        cart_serializer = CartSerializer(cart, context={'request': request})
         total_price = cart_serializer.get_total_price(cart)
         total_quantity = cart_serializer.get_total_quantity(cart)
 

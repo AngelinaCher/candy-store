@@ -51,7 +51,7 @@ class UserOrderListAPIView(APIView):
             order_info = {
                 'order_id': order.order_id,
                 'customer_id': order.customer_id.user_id,
-                'required_date': order.required_date,
+                'required_date': order.required_date.strftime('%d.%m.%Y'),
                 'payment_method': payment_method_display,
                 'status': status_display,
                 'cart_items': cart_items,
@@ -69,6 +69,7 @@ class OrderDetailAPIView(APIView):
     Отображение информации о заказе
 
     Передается параметр order_id и возвращается информация о конкретном заказе
+    Ex: api/v1/order/?order_id=909f0bb0-313e-4a87-89cb-d2d1caa1fbfb
     """
     permission_classes = [permissions.IsAuthenticated]
 
@@ -95,24 +96,21 @@ class OrderDetailAPIView(APIView):
             return Response({"message": "Заказ не найден"}, status=status.HTTP_404_NOT_FOUND)
 
         cart = order.cart_id
-        cart_serializer = CartSerializer(cart)
+        cart_serializer = CartSerializer(cart, context={'request': request})
 
         cart_items = cart_serializer.data.get('cart_items', [])
         total_price = cart_serializer.data.get('total_price', 0)
         total_quantity = cart_serializer.data.get('total_quantity', 0)
 
-        payment_method_display = self.PAYMENT_METHOD_MAPPING.get(order.payment_method)
-        status_display = self.STATUS_MAPPING.get(order.status)
-
         order_info = {
             'order_id': order.order_id,
             'customer_id': order.customer_id.user_id,
-            'required_date': order.required_date,
-            'payment_method': payment_method_display,
+            'required_date': order.required_date.strftime('%d.%m.%Y'),
+            'payment_method': self.PAYMENT_METHOD_MAPPING.get(order.payment_method),
             'status': self.STATUS_MAPPING[order.status],
             'cart_items': cart_items,
             'total_price': total_price,
-            'total_quantity': total_quantity
+            'total_quantity': total_quantity,
         }
 
         return Response(order_info)
