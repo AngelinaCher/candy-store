@@ -36,7 +36,7 @@ class CartSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Cart
-        fields = ('user_id', 'cart_items', 'total_price', 'total_quantity',)
+        fields = ('cart_id', 'user_id', 'cart_items', 'total_price', 'total_quantity',)
 
     def get_total_price(self, obj):
         """ Подсчёт общей суммы всех товаров в зависимости от типа товара """

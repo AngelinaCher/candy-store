@@ -15,7 +15,7 @@ class CartAPIView(APIView):
     def get(self, request):
         """ Корзина покупателя """
         try:
-            cart = Cart.objects.get(user_id=request.user)
+            cart = Cart.objects.get(user_id=request.user, is_active=True)
             serializer = CartSerializer(cart)
             return Response(serializer.data)
         except ObjectDoesNotExist:
