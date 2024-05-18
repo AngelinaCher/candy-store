@@ -15,10 +15,16 @@ class ProductSerializer(serializers.ModelSerializer):
         slug_field='category_name',
         source='category_id'
     )
-    image_path = serializers.ImageField(max_length=None, use_url=True)
+    image_path = serializers.SerializerMethodField()
 
     class Meta:
         model = Product
         fields = (
             'product_id', 'product_name', 'category_name', 'description', 'unit', 'unit_price', 'image_path', 'slug',
         )
+
+    def get_image_path(self, obj):
+        request = self.context.get('request')
+        if request is not None:
+            return request.build_absolute_uri(obj.image_path.url)
+        return obj.image_path.url

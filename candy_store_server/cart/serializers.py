@@ -11,11 +11,11 @@ class CartItemSerializer(serializers.ModelSerializer):
     product_name = serializers.CharField(source='product_id.product_name', read_only=True)
     price = serializers.SerializerMethodField()
     unit = serializers.SerializerMethodField()
-    image = serializers.ImageField(source='product_id.image_path', read_only=True)
+    image = serializers.SerializerMethodField()
 
     class Meta:
         model = CartItem
-        fields = ['product_id', 'product_name', 'price', 'image', 'unit', 'product_quantity']
+        fields = ('product_id', 'product_name', 'price', 'image', 'unit', 'product_quantity')
 
     def get_price(self, obj):
         """ Подсчёт суммы в зависимости от типа товара """
@@ -27,6 +27,13 @@ class CartItemSerializer(serializers.ModelSerializer):
 
     def get_unit(self, obj):
         return obj.product_id.get_unit_display()
+
+    def get_image(self, obj):
+        request = self.context.get('request')
+        image_url = obj.product_id.image_path.url
+        if request:
+            return request.build_absolute_uri(image_url)
+        return image_url
 
 
 class CartSerializer(serializers.ModelSerializer):
