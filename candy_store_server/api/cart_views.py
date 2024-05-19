@@ -92,7 +92,7 @@ class RemoveFromCartAPIView(APIView):
         except Product.DoesNotExist:
             return Response({"message": "Указанный продукт не существует"}, status=400)
 
-        cart, created = Cart.objects.get_or_create(user_id=request.user)
+        cart, created = Cart.objects.get(user_id=request.user, is_active=True)
 
         try:
             cart_item = CartItem.objects.get(cart_id=cart, product_id=product)
@@ -125,7 +125,7 @@ class ClearCartAPIView(APIView):
 
     def get(self, request):
         try:
-            cart = Cart.objects.get(user_id=request.user)
+            cart = Cart.objects.get(user_id=request.user, is_active=True)
             cart_items = CartItem.objects.get(cart_id=cart)
             cart_items.delete()
             cart.delete()
