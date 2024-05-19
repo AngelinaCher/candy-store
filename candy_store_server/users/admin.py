@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from orders.admin import OrderAdmin
+from orders.admin import OrderAdmin, OrderInline
 from users.models import CustomUser
 
 
@@ -12,4 +12,4 @@ class CustomUserAdmin(admin.ModelAdmin):
               'is_superuser')
     readonly_fields = ('date_joined', 'user_id')
     search_fields = ('email',)
-    inlines = (OrderAdmin,)
+    inlines = (OrderInline,)
