@@ -13,7 +13,8 @@
             <router-link
                 :to="{ name: 'CatalogPage', params: { productName: `${cat['category_id']}/${cat['slug']}` }}"
                 style="text-decoration: none; color: #000000;"
-            >{{ cat["category_name"] }}</router-link>
+            >{{ cat["category_name"] }}
+            </router-link>
           </b-dropdown-item>
         </b-dropdown>
       </div>
@@ -25,23 +26,49 @@
         ></b-form-input>
       </div>
 
-      <router-link class="app-header_nav__cart" to="/cart">
-        <div>
-          <img src="../../assets/icons/cart.svg" alt="">
-        </div>
-        <div class="app-header_nav__account_text">
-          Корзина
-        </div>
-      </router-link>
+      <template v-if="$store.state.isAuthenticated">
+        <router-link class="app-header_nav__cart" to="/cart">
+          <div>
+            <img src="../../assets/icons/cart.svg" alt="">
+          </div>
+          <div class="app-header_nav__account_text">
+            Корзина
+          </div>
+        </router-link>
+      </template>
 
-      <router-link class="app-header_nav__account" to="/account">
-        <div class="">
-          <img src="../../assets/icons/account.svg" alt="">
-        </div>
-        <div class="app-header_nav__account_text">
-          Аккаунт
-        </div>
-      </router-link>
+      <template v-else>
+        <router-link class="app-header_nav__cart" to="/login">
+          <div>
+            <img src="../../assets/icons/cart.svg" alt="">
+          </div>
+          <div class="app-header_nav__account_text">
+            Корзина
+          </div>
+        </router-link>
+      </template>
+
+      <template v-if="$store.state.isAuthenticated">
+        <router-link class="app-header_nav__account" to="/account">
+          <div class="app-header_nav__account">
+            <img src="../../assets/icons/account.svg" alt="">
+          </div>
+          <div class="app-header_nav__account_text">
+            Аккаунт
+          </div>
+        </router-link>
+      </template>
+
+      <template v-else>
+        <router-link class="app-header_nav__account" to="/login">
+          <div class="">
+            <img src="../../assets/icons/account.svg" alt="">
+          </div>
+          <div class="app-header_nav__account_text">
+            Вход
+          </div>
+        </router-link>
+      </template>
 
     </nav>
 
@@ -75,7 +102,3 @@ export default {
   },
 }
 </script>
-
-<style>
-
-</style>
