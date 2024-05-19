@@ -89,15 +89,24 @@
   border-radius: 12px;
   width: 315px;
   height: 394px;
+  text-align: center;
+}
+
+.main-page_new_product img {
+  width: 200px;
+  height: 200px;
 }
 
 .main-page_new_product h2 {
   margin-top: 10px;
   font-size: 16px;
   line-height: 125%;
+  text-align: left;
+  height: 20px;
 }
 
 .main-page_new_product p {
+  text-align: left;
   margin-top: 20px;
   font-size: 22px;
   font-weight: 500;

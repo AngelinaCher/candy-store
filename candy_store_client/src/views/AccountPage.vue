@@ -20,7 +20,7 @@
         </template>
         <b-card-text>
           <Orders
-            :orders="orderData"
+              :orders="orderData"
           />
         </b-card-text>
       </b-tab>
@@ -71,6 +71,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 import Orders from "../components/account-page/Orders.vue";
 import Account from "../components/account-page/Account.vue";
 
@@ -81,34 +83,44 @@ export default {
     Account,
   },
   mounted() {
-    document.title = "Аккаунт | Карамелька "
+    document.title = "Аккаунт | Карамелька ";
+    this.getUserData();
+    this.getOrdersData();
   },
   data() {
     return {
       userData: {
-        "name": "Иван",
-        "second_name": "Иванов",
-        "email": "ivanov@mail.ru",
-        "password": "test",
+        "name": "",
+        "second_name": "",
+        "email": "",
+        "password": "",
       },
-      orderData: [
-        {
-          "date": "12.01.2024",
-          "number_order": "445567-879234",
-          "amount": "12 000",
-        },
-        {
-          "date": "01.02.24",
-          "number_order": "445567-879233",
-          "amount": "23 000",
-        }
-      ],
+      orderData: [],
     }
   },
   methods: {
     changePassword(password) {
       console.log(password);
-    }
+    },
+    async getUserData() {
+      await axios
+          .get("http://127.0.0.1:8000/api/v1/profile/")
+          .then(response => {
+            this.userData["name"] = response["data"]["firstname"];
+            this.userData["second_name"] = response["data"]["lastname"];
+            this.userData["email"] = response["data"]["email"];
+            this.userData["password"] = "*************";
+          })
+          .catch(err => console.log(err))
+    },
+    async getOrdersData() {
+      await axios
+          .get("http://127.0.0.1:8000/api/v1/user-orders/")
+          .then(response => {
+            this.orderData = response.data;
+          })
+          .catch(err => console.log(err))
+    },
   }
 }
 </script>

@@ -106,6 +106,7 @@
 .account-page_orders {
   margin-left: 70px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .account-page_order {
@@ -117,6 +118,7 @@
   height: 144px;
   background: #f6f6f6;
   padding: 20px;
+  margin-bottom: 20px;
 }
 
 .account-page_order:hover {
