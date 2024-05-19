@@ -125,12 +125,15 @@ class ClearCartAPIView(APIView):
 
     def get(self, request):
         try:
-            cart = Cart.objects.get(user_id=request.user, is_active=True)
-            cart_items = CartItem.objects.get(cart_id=cart)
-            cart_items.delete()
-            cart.delete()
+            carts = Cart.objects.filter(user_id=request.user, is_active=True)
+            if not carts.exists():
+                return Response({"message": "Корзина не найдена"}, status=404)
+
+            for cart in carts:
+                cart_items = CartItem.objects.filter(cart_id=cart)
+                cart_items.delete()
+                cart.delete()
+
             return Response({"message": "Корзина и все товары в ней были удалены"}, status=200)
-        except Cart.DoesNotExist:
-            return Response({"message": "Корзина не найдена"}, status=404)
         except Exception as e:
-            return Response({"message": f"Произошла ошибка при удалении корзины {e}"}, status=500)
+            return Response({"message": f"Произошла ошибка при удалении корзины: {e}"}, status=500)
