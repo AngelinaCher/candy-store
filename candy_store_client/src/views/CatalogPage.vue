@@ -34,7 +34,7 @@
             <h2 class="catalog-page_products__product_name"> {{ product["product_name"] }} </h2>
             <p class="catalog-page_products__product_price">{{ product["unit_price"] }} ₽</p>
           </router-link>
-          <b-button class="custom-button">В корзину</b-button>
+          <b-button class="custom-button" @click="addToCart(product['product_id'])">В корзину</b-button>
         </div>
       </div>
     </div>
@@ -92,6 +92,20 @@ export default {
             this.categories = response.data;
           })
           .catch(err => console.log(err))
+    },
+    async addToCart(productId) {
+      if (this.$store.state.isAuthenticated) {
+        await axios
+            .post(
+                "http://127.0.0.1:8000/api/v1/cart/add/",
+                {"product_id": productId, "product_quantity": "1"}
+            )
+            .then(response => console.log(response))
+            .catch(err => console.log(err))
+      } else {
+        const toPath = "/login";
+        this.$router.push(toPath);
+      }
     }
   },
 }

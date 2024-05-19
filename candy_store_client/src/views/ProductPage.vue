@@ -18,17 +18,17 @@
         <div class="product-page_info__actions">
           <div class="product-page_info__actions_add">
             <div class="cart-page_content__items_amount__sign">
-              <img src="../assets/icons/minus.svg" alt="minus">
+              <img src="../assets/icons/minus.svg" alt="minus" @click="decreaseQuantity">
             </div>
 
-            <div class="cart-page_content__items_amount__amount">1</div>
+            <div class="cart-page_content__items_amount__amount">{{ quantity }}</div>
 
             <div class="cart-page_content__items_amount__sign">
-              <img src="../assets/icons/plus.svg" alt="plus">
+              <img src="../assets/icons/plus.svg" alt="plus" @click="increaseQuantity">
             </div>
           </div>
           <div class="product-page_info__actions__add_to_card">
-            <b-button class="custom-button">В корзину</b-button>
+            <b-button class="custom-button" @click="addToCart(product['product_id'])">В корзину</b-button>
           </div>
         </div>
       </div>
@@ -53,6 +53,7 @@ export default {
   data() {
     return {
       product: {},
+      quantity: 1,
     }
   },
   watch: {
@@ -71,6 +72,28 @@ export default {
             this.product = response.data;
           })
           .catch(err => console.log(err))
+    },
+    async addToCart(productId) {
+      if (this.$store.state.isAuthenticated) {
+        await axios
+            .post(
+                "http://127.0.0.1:8000/api/v1/cart/add/",
+                {"product_id": productId, "product_quantity": this.quantity}
+            )
+            .then(response => console.log(response))
+            .catch(err => console.log(err))
+      } else {
+        const toPath = "/login";
+        this.$router.push(toPath);
+      }
+    },
+    decreaseQuantity() {
+      if (this.quantity > 1) {
+        this.quantity = this.quantity - 1;
+      }
+    },
+    increaseQuantity() {
+      this.quantity++;
     },
   },
 }
