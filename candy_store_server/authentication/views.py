@@ -4,11 +4,13 @@ from djoser import email, utils
 from djoser.conf import settings
 from djoser.views import UserViewSet
 from rest_framework.decorators import action
+from rest_framework.versioning import URLPathVersioning
 from rest_framework_simplejwt.views import (TokenObtainPairView,
                                             TokenRefreshView, TokenVerifyView)
 
 
 class SetPasswordView(UserViewSet):
+    versioning_class = URLPathVersioning
 
     @action(["post"], detail=False)
     def set_password(self, request, *args, **kwargs):
@@ -24,6 +26,8 @@ class RegisterUserView(UserViewSet):
     Получает email и password, затем оправляет письмо на почту для активации аккаунта
     """
 
+    versioning_class = URLPathVersioning
+
     def create(self, request, *args, **kwargs):
         return super().create(request, *args, **kwargs)
 
@@ -34,17 +38,23 @@ class LoginView(TokenObtainPairView):
     jwt-токены.
     """
 
+    versioning_class = URLPathVersioning
+
 
 class RefreshTokenView(TokenRefreshView):
     """
     Принимает refresh-token и обновляет access-токен
     """
 
+    versioning_class = URLPathVersioning
+
 
 class VerifyTokenView(TokenVerifyView):
     """
     Принимает токен и указывает, является ли он действительным.
     """
+
+    versioning_class = URLPathVersioning
 
 
 class SetPasswordEmail(email.ActivationEmail):

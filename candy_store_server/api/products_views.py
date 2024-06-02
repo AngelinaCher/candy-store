@@ -5,6 +5,7 @@ from rest_framework.exceptions import ValidationError
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.response import Response
 from rest_framework.status import HTTP_200_OK, HTTP_400_BAD_REQUEST
+from rest_framework.versioning import URLPathVersioning
 
 from candy_store.models import Category, Product
 from candy_store.serializers import CategorySerializer, ProductSerializer
@@ -17,6 +18,7 @@ class CategoryAPIView(ListAPIView):
     Возвращает список всех категорий, где есть товары
     """
     serializer_class = CategorySerializer
+    versioning_class = URLPathVersioning
 
     def get_queryset(self) -> QuerySet:
         queryset = Category.objects.annotate(num_products=Count('product'))
@@ -33,6 +35,7 @@ class ProductAPIView(ListAPIView):
     и список товаров по указанной категории, если category_id присутствует в запросе.
     """
     serializer_class = ProductSerializer
+    versioning_class = URLPathVersioning
 
     def get_queryset(self) -> QuerySet:
         category_id = self.request.query_params.get('category_id')
@@ -65,6 +68,7 @@ class ProductDetailView(RetrieveAPIView):
     """ Вывод конкретного товара """
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+    versioning_class = URLPathVersioning
     lookup_field = 'slug'
 
 
@@ -72,12 +76,14 @@ class NewProductsAPIView(ListAPIView):
     """ Вывод новинок """
     queryset = Product.objects.order_by('-created_at')[:4]
     serializer_class = ProductSerializer
+    versioning_class = URLPathVersioning
 
 
 class RecommendedProductsAPIView(ListAPIView):
     """ Рекомендуемые товары """
 
     serializer_class = ProductSerializer
+    versioning_class = URLPathVersioning
 
     def get_queryset(self):
         all_products = Product.objects.all()

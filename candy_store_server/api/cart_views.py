@@ -3,6 +3,7 @@ from drf_spectacular.utils import OpenApiExample, extend_schema
 from rest_framework import permissions
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.versioning import URLPathVersioning
 
 from candy_store.models import Product
 from cart.models import Cart, CartItem
@@ -11,6 +12,7 @@ from cart.serializers import CartSerializer
 
 class CartAPIView(APIView):
     permission_classes = [permissions.IsAuthenticated]
+    versioning_class = URLPathVersioning
 
     def get(self, request):
         """
@@ -35,6 +37,7 @@ class CartAPIView(APIView):
 class AddToCartAPIView(APIView):
     """ Создание корзины и добавление в неё товаров """
     permission_classes = [permissions.IsAuthenticated]
+    versioning_class = URLPathVersioning
 
     def post(self, request):
         """
@@ -82,6 +85,7 @@ class AddToCartAPIView(APIView):
 class RemoveFromCartAPIView(APIView):
     """ Уменьшение количества товаров в корзине и удаление корзины, если в ней не осталось товаров """
     permission_classes = [permissions.IsAuthenticated]
+    versioning_class = URLPathVersioning
 
     def post(self, request):
         product_id = request.data.get('product_id')
@@ -122,6 +126,7 @@ class RemoveFromCartAPIView(APIView):
 class ClearCartAPIView(APIView):
     """ Удаление всех товаров из корзины и корзины пользователя """
     permission_classes = [permissions.IsAuthenticated]
+    versioning_class = URLPathVersioning
 
     def get(self, request):
         try:

@@ -5,6 +5,7 @@ from drf_spectacular.utils import OpenApiExample, extend_schema
 from rest_framework import permissions, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.versioning import URLPathVersioning
 
 from cart.models import Cart
 from cart.serializers import CartSerializer
@@ -17,6 +18,7 @@ class UserOrderListAPIView(APIView):
     Отображение информации о всех заказах пользователя
     """
     permission_classes = [permissions.IsAuthenticated]
+    versioning_class = URLPathVersioning
 
     PAYMENT_METHOD_MAPPING = {
         'CH': 'Наличные',
@@ -72,6 +74,7 @@ class OrderDetailAPIView(APIView):
     Ex: api/v1/order/?order_id=909f0bb0-313e-4a87-89cb-d2d1caa1fbfb
     """
     permission_classes = [permissions.IsAuthenticated]
+    versioning_class = URLPathVersioning
 
     PAYMENT_METHOD_MAPPING = {
         'CH': 'Наличные',
@@ -125,6 +128,7 @@ class OrderDetailAPIView(APIView):
 class OrderCreateAPIView(APIView):
     """ Создание заказа """
     permission_classes = [permissions.IsAuthenticated]
+    versioning_class = URLPathVersioning
 
     PAYMENT_METHOD_MAPPING = {
         'Наличные': 'CH',
