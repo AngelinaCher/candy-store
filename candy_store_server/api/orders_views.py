@@ -4,8 +4,8 @@ from django.utils import timezone
 from drf_spectacular.utils import OpenApiExample, extend_schema
 from rest_framework import permissions, status
 from rest_framework.response import Response
-from rest_framework.views import APIView
 from rest_framework.versioning import URLPathVersioning
+from rest_framework.views import APIView
 
 from cart.models import Cart
 from cart.serializers import CartSerializer

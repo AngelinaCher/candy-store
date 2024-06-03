@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from orders.admin import OrderAdmin, OrderInline
+from orders.admin import OrderInline
 from users.models import CustomUser
 
 

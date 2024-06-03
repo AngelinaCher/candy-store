@@ -2,8 +2,8 @@ from django.core.exceptions import ObjectDoesNotExist
 from drf_spectacular.utils import OpenApiExample, extend_schema
 from rest_framework import permissions
 from rest_framework.response import Response
-from rest_framework.views import APIView
 from rest_framework.versioning import URLPathVersioning
+from rest_framework.views import APIView
 
 from candy_store.models import Product
 from cart.models import Cart, CartItem

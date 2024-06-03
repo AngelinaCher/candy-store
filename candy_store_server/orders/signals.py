@@ -1,11 +1,12 @@
 # в файле signals.py вашего приложения
 
-from django.db.models.signals import post_save
 from django.conf import settings
-from django.dispatch import receiver
 from django.core.mail import send_mail
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
+
 from orders.models import Order
 
 
